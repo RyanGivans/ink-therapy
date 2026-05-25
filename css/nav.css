@@ -1,13 +1,11 @@
-/* ===== PART 1 START: SHARED NAVIGATION SYSTEM ===== */
-
+/* ===== PART 1 START: SHARED NAV ===== */
 :root{
   --ink:#050407;
   --skin:#fff8f1;
-  --muted:rgba(255,248,241,.68);
-  --gold:#d1ad72;
-  --gold-soft:rgba(209,173,114,.28);
+  --muted:rgba(255,248,241,.66);
+  --gold:#d6b16f;
   --line:rgba(255,255,255,.14);
-  --glass:rgba(255,255,255,.05);
+  --glass:rgba(255,255,255,.06);
 }
 
 .site-header{
@@ -15,21 +13,29 @@
   top:0;
   left:0;
   width:100%;
-  z-index:5000;
-  padding:22px 5vw;
+  z-index:999;
+  padding:18px 5vw;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background:linear-gradient(to bottom,rgba(5,4,7,.82),rgba(5,4,7,.1));
+  background:linear-gradient(to bottom,rgba(5,4,7,.82),rgba(5,4,7,.08));
   backdrop-filter:blur(22px);
 }
 
 .brand{
-  font-size:14px;
-  letter-spacing:.34em;
-  font-weight:900;
+  display:flex;
+  align-items:center;
+  gap:12px;
   color:var(--skin);
   text-decoration:none;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.22em;
+}
+
+.brand img{
+  height:38px;
+  width:auto;
 }
 
 .brand span{
@@ -38,40 +44,39 @@
 
 .desktop-nav{
   display:flex;
+  gap:26px;
   align-items:center;
-  gap:28px;
 }
 
 .desktop-nav a{
   color:var(--skin);
   text-decoration:none;
-  font-size:12px;
   text-transform:uppercase;
-  letter-spacing:.18em;
+  letter-spacing:.15em;
+  font-size:11px;
   opacity:.76;
   transition:.3s;
 }
 
 .desktop-nav a:hover{
-  opacity:1;
   color:var(--gold);
+  opacity:1;
 }
 
 .nav-cta{
-  padding:14px 20px;
+  padding:13px 18px;
   border-radius:999px;
-  border:1px solid rgba(255,255,255,.16);
+  border:1px solid rgba(214,177,111,.4);
   background:rgba(255,255,255,.06);
-  backdrop-filter:blur(18px);
 }
 
 .menu-btn{
   display:none;
-  width:48px;
-  height:48px;
+  width:46px;
+  height:46px;
   border-radius:50%;
   border:1px solid var(--line);
-  background:rgba(255,255,255,.05);
+  background:var(--glass);
   color:var(--skin);
   font-size:22px;
 }
@@ -79,16 +84,13 @@
 .mobile-panel{
   position:fixed;
   inset:0;
-  z-index:4999;
-  background:
-    radial-gradient(circle at top right,rgba(209,173,114,.12),transparent 30%),
-    radial-gradient(circle at bottom left,rgba(122,98,255,.16),transparent 34%),
-    rgba(5,4,7,.97);
+  z-index:998;
   display:none;
   flex-direction:column;
-  justify-content:center;
   align-items:center;
+  justify-content:center;
   gap:28px;
+  background:rgba(5,4,7,.97);
   backdrop-filter:blur(30px);
 }
 
@@ -99,14 +101,14 @@
 .mobile-panel a{
   color:var(--skin);
   text-decoration:none;
-  font-size:18px;
-  letter-spacing:.14em;
   text-transform:uppercase;
+  letter-spacing:.16em;
+  font-size:18px;
 }
 
 @media(max-width:900px){
   .desktop-nav{display:none}
   .menu-btn{display:block}
+  .brand img{height:32px}
 }
-
 /* ===== PART 1 END ===== */
