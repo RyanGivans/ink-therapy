@@ -51,25 +51,27 @@ p{color:rgba(255,248,241,.68);line-height:1.75;font-size:17px}
 <div class="noise"></div>
 
 <header class="site-header">
-  <a href="index.html" class="brand">INK <span>THERAPY</span></a>
+  <a href="../index.html" class="brand"><img src="../assets/logo-white.png" alt="Ink Therapy logo"></a>
   <nav class="desktop-nav">
-    <a href="team.html">Artists</a>
-    <a href="services.html">Services</a>
-    <a href="aftercare.html">Aftercare</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="booth-rental.html">Booth Rental</a>
-    <a href="contact.html" class="nav-cta">Book</a>
+    <a href="../owner/">Owner</a>
+    <a href="../team/">Artists</a>
+    <a href="../services/">Services</a>
+    <a href="../aftercare/">Aftercare</a>
+    <a href="../gallery/">Gallery</a>
+    <a href="../booth-rental/">Booth Rental</a>
+    <a href="../contact/" class="nav-cta">Book</a>
   </nav>
   <button class="menu-btn" id="menuBtn">☰</button>
 </header>
 
 <div class="mobile-panel" id="mobilePanel">
-  <a href="team.html">Artists</a>
-  <a href="services.html">Services</a>
-  <a href="aftercare.html">Aftercare</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="booth-rental.html">Booth Rental</a>
-  <a href="contact.html">Book</a>
+  <a href="../owner/">Owner</a>
+  <a href="../team/">Artists</a>
+  <a href="../services/">Services</a>
+  <a href="../aftercare/">Aftercare</a>
+  <a href="../gallery/">Gallery</a>
+  <a href="../booth-rental/">Booth Rental</a>
+  <a href="../contact/">Book</a>
 </div>
 <!-- ===== PART 1 END ===== -->
 
@@ -177,8 +179,8 @@ p{color:rgba(255,248,241,.68);line-height:1.75;font-size:17px}
   </p>
 
   <div class="btn-row">
-    <a href="contact.html" class="btn">Book a Consult</a>
-    <a href="aftercare.html" class="btn">Prep + Aftercare</a>
+    <a href="../contact/" class="btn">Book a Consult</a>
+    <a href="../aftercare/" class="btn">Prep + Aftercare</a>
   </div>
 
   <div class="quick-facts">
@@ -289,17 +291,6 @@ p{color:rgba(255,248,241,.68);line-height:1.75;font-size:17px}
   box-shadow:0 40px 120px rgba(0,0,0,.55);
 }
 .cta-box p{max-width:720px;margin-top:24px;font-size:20px}
-.footer{
-  padding:42px 5vw;
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  flex-wrap:wrap;
-  border-top:1px solid rgba(255,255,255,.08);
-  color:rgba(255,248,241,.52);
-  font-size:13px;
-}
-.footer a{color:#fff8f1}
 @media(max-width:900px){
   .process-wrap{grid-template-columns:1fr}
   .cta{padding:90px 22px}
@@ -354,16 +345,8 @@ p{color:rgba(255,248,241,.68);line-height:1.75;font-size:17px}
 
 </main>
 
-<footer class="footer">
-  <span>© Ink Therapy • Fayetteville, Arkansas</span>
-  <span>
-    <a href="https://www.instagram.com/ink_therapy777/">Instagram</a>
-    ·
-    <a href="https://www.facebook.com/inktherapy777">Facebook</a>
-    ·
-    <a href="https://www.tiktok.com/@inktherapy777">TikTok</a>
-  </span>
-</footer>
+<div id="site-footer"></div>
+<script src="../components/footer.js"></script>
 
 <script>
 const menuBtn = document.getElementById("menuBtn");
