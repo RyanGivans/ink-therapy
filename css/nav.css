@@ -111,4 +111,18 @@
   .menu-btn{display:block}
   .brand img{height:32px}
 }
+
+.brand-logo img{
+  height:42px;
+  width:auto;
+  display:block;
+  filter:invert(1) brightness(2);
+}
+
+@media(max-width:700px){
+  .brand-logo img{
+    height:34px;
+  }
+}
+
 /* ===== PART 1 END ===== */
