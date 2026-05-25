@@ -136,7 +136,7 @@ p{
 <main>
 <!-- ===== PART 1 END ===== -->
 
- <!-- ===== PART 2 START: CINEMATIC HERO ===== -->
+<!-- ===== PART 2 START: CINEMATIC HERO ===== -->
 <section class="hero">
 <style>
 .hero{
@@ -172,23 +172,23 @@ p{
   position:absolute;
   inset:0;
   background:
-    linear-gradient(90deg,rgba(3,4,3,.52),rgba(3,4,3,.22),rgba(3,4,3,.04)),
-    linear-gradient(to top,#07100b 0%,rgba(7,16,11,.28) 34%,rgba(7,16,11,.02) 100%);
+    linear-gradient(90deg,rgba(3,4,3,.48),rgba(3,4,3,.2),rgba(3,4,3,.04)),
+    linear-gradient(to top,#07100b 0%,rgba(7,16,11,.24) 36%,rgba(7,16,11,.02) 100%);
 }
 
 .hero-title{
   position:absolute;
   z-index:3;
-  top:145px;
+  top:128px;
   left:10vw;
   max-width:820px;
 }
 
 .hero h1{
-  font-size:clamp(44px,6.5vw,96px);
+  font-size:clamp(46px,6.4vw,96px);
   max-width:820px;
   letter-spacing:-.07em;
-  text-shadow:0 32px 90px rgba(0,0,0,.82);
+  text-shadow:0 32px 90px rgba(0,0,0,.85);
 }
 
 .hero h1 em{
@@ -202,7 +202,7 @@ p{
   position:absolute;
   z-index:3;
   left:10vw;
-  bottom:95px;
+  bottom:82px;
   max-width:650px;
 }
 
@@ -215,7 +215,7 @@ p{
   display:flex;
   align-items:center;
   gap:18px;
-  margin-top:24px;
+  margin-top:22px;
   color:rgba(255,248,237,.78);
   text-transform:uppercase;
   letter-spacing:.17em;
@@ -235,25 +235,29 @@ p{
   }
 
   .hero-bg img{
-    object-position:58% center;
+    object-position:76% center;
+    filter:saturate(1.05) contrast(1.05) brightness(.72);
+    animation:none;
+    transform:scale(1.02);
   }
 
   .hero-bg::after{
     background:
-      linear-gradient(to bottom,rgba(3,4,3,.72),rgba(3,4,3,.22),rgba(3,4,3,.82)),
-      linear-gradient(90deg,rgba(3,4,3,.58),rgba(3,4,3,.16));
+      linear-gradient(to bottom,rgba(7,16,11,.92) 0%,rgba(7,16,11,.5) 34%,rgba(7,16,11,.9) 100%),
+      linear-gradient(90deg,rgba(7,16,11,.84),rgba(7,16,11,.24));
   }
 
   .hero-title{
-    top:125px;
+    top:150px;
     left:22px;
     right:22px;
     max-width:none;
   }
 
   .hero h1{
-    font-size:clamp(42px,13vw,72px);
+    font-size:clamp(42px,12.8vw,68px);
     max-width:100%;
+    line-height:.92;
   }
 
   .hero h1 em{
@@ -276,11 +280,22 @@ p{
     font-size:10px;
     line-height:1.5;
     align-items:flex-start;
+    gap:12px;
   }
 
   .hero-signature::before{
-    width:42px;
+    width:38px;
     margin-top:7px;
+  }
+
+  .hero .btn-row{
+    margin-top:24px;
+    gap:12px;
+  }
+
+  .hero .btn{
+    width:100%;
+    padding:15px 18px;
   }
 }
 </style>
@@ -316,7 +331,7 @@ p{
 </section>
 <!-- ===== PART 2 END ===== -->
 
-  <!-- ===== PART 3 START: HOME CONTENT ===== -->
+<!-- ===== PART 3 START: HOME CONTENT ===== -->
 <section class="intro">
 <style>
 .intro{
@@ -522,7 +537,7 @@ p{
 </section>
 <!-- ===== PART 3 END ===== -->
 
-  <!-- ===== PART 4 START: TEAM STRIP + CTA + FOOTER + JS ===== -->
+<!-- ===== PART 4 START: TEAM STRIP + CTA + FOOTER + JS ===== -->
 <section class="team-strip">
 <style>
 .team-strip{
@@ -726,4 +741,3 @@ mobilePanel.querySelectorAll("a").forEach(link => {
 </body>
 </html>
 <!-- ===== PART 4 END ===== -->
-  
