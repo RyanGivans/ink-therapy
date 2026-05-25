@@ -1,4 +1,4 @@
-<!-- ===== PART 1 START: HEAD + GLOBAL SYSTEM ===== -->
+<!-- ===== PART 1 START: HEAD + GLOBAL STYLE ===== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,46 +6,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>Ink Therapy | Fayetteville Tattoo Sanctuary</title>
-
-<meta name="description" content="Ink Therapy is an artist-owned tattoo sanctuary in Fayetteville, Arkansas built around healing, creativity, comfort, identity, and custom tattoo artistry." />
+<meta name="description" content="Ink Therapy is a luxury-feeling, LGBTQIA+ friendly tattoo studio in Fayetteville, Arkansas built around custom art, comfort, identity, healing, and community." />
 
 <link rel="stylesheet" href="css/nav.css" />
 
 <style>
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
   font-family:Inter,Arial,sans-serif;
-  background:
-    radial-gradient(circle at 15% 10%, rgba(209,173,114,.08), transparent 28%),
-    radial-gradient(circle at 80% 20%, rgba(122,98,255,.14), transparent 34%),
-    radial-gradient(circle at 40% 90%, rgba(255,118,183,.08), transparent 28%),
-    #050407;
+  background:#050407;
   color:#fff8f1;
   overflow-x:hidden;
 }
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
 
-img{
-  max-width:100%;
-  display:block;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-section{
-  position:relative;
+:root{
+  --ink:#050407;
+  --skin:#fff8f1;
+  --muted:rgba(255,248,241,.68);
+  --gold:#d1ad72;
+  --line:rgba(255,255,255,.14);
 }
 
 .noise{
@@ -58,9 +40,9 @@ section{
 }
 
 .eyebrow{
-  color:#d1ad72;
+  color:var(--gold);
   text-transform:uppercase;
-  letter-spacing:.24em;
+  letter-spacing:.26em;
   font-size:11px;
   font-weight:900;
 }
@@ -71,248 +53,181 @@ h1,h2,h3{
   line-height:.9;
 }
 
-h1{
-  font-size:clamp(72px,13vw,200px);
-}
-
-h2{
-  font-size:clamp(48px,8vw,120px);
-}
-
-h3{
-  font-size:clamp(28px,5vw,58px);
-}
-
 p{
-  color:rgba(255,248,241,.68);
-  line-height:1.8;
+  color:var(--muted);
+  line-height:1.75;
   font-size:17px;
 }
 
 .btn-row{
   display:flex;
-  gap:16px;
+  gap:15px;
   flex-wrap:wrap;
   margin-top:34px;
 }
 
 .btn{
-  position:relative;
-  overflow:hidden;
   display:inline-flex;
-  justify-content:center;
   align-items:center;
+  justify-content:center;
   padding:16px 24px;
   border-radius:999px;
   border:1px solid rgba(255,255,255,.18);
-  background:rgba(255,255,255,.05);
-  backdrop-filter:blur(20px);
+  background:rgba(255,255,255,.06);
+  backdrop-filter:blur(18px);
   color:#fff8f1;
+  text-transform:uppercase;
+  letter-spacing:.15em;
   font-size:12px;
   font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:.16em;
   transition:.35s ease;
-  box-shadow:
-    inset 0 0 0 1px rgba(255,255,255,.04),
-    0 18px 60px rgba(0,0,0,.35);
-}
-
-.btn::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(
-      120deg,
-      transparent,
-      rgba(209,173,114,.35),
-      transparent
-    );
-  transform:translateX(-120%);
-  transition:.55s ease;
-}
-
-.btn:hover::before{
-  transform:translateX(120%);
 }
 
 .btn:hover{
   transform:translateY(-3px);
-  border-color:rgba(209,173,114,.58);
-  box-shadow:
-    0 0 0 1px rgba(209,173,114,.28),
-    0 30px 90px rgba(0,0,0,.52),
-    0 0 50px rgba(209,173,114,.12);
-}
-
-.btn-primary{
-  background:
-    linear-gradient(135deg,rgba(255,248,241,.12),rgba(209,173,114,.08)),
-    rgba(5,4,7,.72);
-}
-
-.btn-secondary{
-  background:rgba(255,255,255,.04);
+  border-color:rgba(209,173,114,.65);
+  box-shadow:0 24px 80px rgba(0,0,0,.45),0 0 50px rgba(209,173,114,.14);
 }
 
 @media(max-width:800px){
-
-  .btn{
-    width:100%;
-  }
-
+  .btn{width:100%}
 }
-
 </style>
 </head>
 
 <body>
-
 <div class="noise"></div>
 
-<!-- ===== PART 1 END ===== -->
-
-  <!-- ===== PART 2 START: NAV + HERO ===== -->
-
 <header class="site-header">
-
-  <a href="index.html" class="brand">
-    INK <span>THERAPY</span>
-  </a>
+  <a href="index.html" class="brand">INK <span>THERAPY</span></a>
 
   <nav class="desktop-nav">
-    <a href="team.html">Artists</a>
-    <a href="services.html">Services</a>
-    <a href="aftercare.html">Aftercare</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="booth-rental.html">Booth Rental</a>
-    <a href="contact.html" class="nav-cta">Book</a>
+    <a href="owner/">Owner</a>
+    <a href="team/">Artists</a>
+    <a href="services/">Services</a>
+    <a href="gallery/">Gallery</a>
+    <a href="booth-rental/">Booth Rental</a>
+    <a href="contact/" class="nav-cta">Book</a>
   </nav>
 
   <button class="menu-btn" id="menuBtn">☰</button>
-
 </header>
 
 <div class="mobile-panel" id="mobilePanel">
-
-  <a href="team.html">Artists</a>
-  <a href="services.html">Services</a>
-  <a href="aftercare.html">Aftercare</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="booth-rental.html">Booth Rental</a>
-  <a href="contact.html">Book</a>
-
+  <a href="owner/">Owner</a>
+  <a href="team/">Artists</a>
+  <a href="services/">Services</a>
+  <a href="gallery/">Gallery</a>
+  <a href="booth-rental/">Booth Rental</a>
+  <a href="contact/">Book</a>
 </div>
 
 <main>
+<!-- ===== PART 1 END ===== -->
 
-<!-- ===== HERO START: CINEMATIC INK THERAPY INTRO ===== -->
+  <!-- ===== PART 2 START: CINEMATIC HERO ===== -->
 <section class="hero">
-
 <style>
 .hero{
   min-height:100vh;
-  padding:160px 5vw 70px;
+  position:relative;
+  overflow:hidden;
   display:flex;
   align-items:center;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at 68% 28%, rgba(209,173,114,.20), transparent 18%),
-    radial-gradient(circle at 82% 64%, rgba(120,90,255,.16), transparent 24%),
-    radial-gradient(circle at 18% 72%, rgba(255,255,255,.08), transparent 22%),
-    linear-gradient(135deg,#030204 0%,#08050b 45%,#120c14 100%);
+  padding:140px 5vw 70px;
+  background:#050407;
 }
 
-.hero::before{
-  content:"INK THERAPY";
+.hero-bg{
   position:absolute;
-  right:-8vw;
-  top:12vh;
-  font-family:Georgia,serif;
-  font-size:clamp(90px,17vw,260px);
-  line-height:.8;
-  letter-spacing:-.08em;
-  color:transparent;
-  -webkit-text-stroke:1px rgba(255,248,241,.08);
-  opacity:.9;
-  z-index:1;
+  inset:0;
+  z-index:0;
 }
 
-.hero::after{
+.hero-bg img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:contrast(1.08) saturate(.92) brightness(.62);
+  transform:scale(1.08);
+  animation:slowZoom 18s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom{
+  from{transform:scale(1.05)}
+  to{transform:scale(1.16)}
+}
+
+.hero-bg::after{
   content:"";
   position:absolute;
-  width:760px;
-  height:760px;
-  right:-180px;
-  top:120px;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(5,4,7,.94) 0%,rgba(5,4,7,.58) 44%,rgba(5,4,7,.24) 100%),
+    linear-gradient(to top,#050407 0%,rgba(5,4,7,.45) 42%,rgba(5,4,7,.12) 100%),
+    radial-gradient(circle at 74% 34%,rgba(209,173,114,.18),transparent 24%);
+}
+
+.hero-aura{
+  position:absolute;
+  width:740px;
+  height:740px;
+  right:-190px;
+  top:80px;
   border-radius:50%;
   background:
-    radial-gradient(circle at 38% 36%, rgba(209,173,114,.35), transparent 18%),
-    radial-gradient(circle at 62% 64%, rgba(255,248,241,.12), transparent 24%),
-    radial-gradient(circle at 28% 72%, rgba(115,87,255,.18), transparent 28%);
-  filter:blur(54px);
-  animation:heroAura 8s ease-in-out infinite alternate;
+    radial-gradient(circle at 35% 35%,rgba(209,173,114,.34),transparent 18%),
+    radial-gradient(circle at 60% 62%,rgba(130,105,255,.22),transparent 30%),
+    radial-gradient(circle at 28% 72%,rgba(255,255,255,.12),transparent 22%);
+  filter:blur(64px);
   z-index:1;
+  animation:auraMove 9s ease-in-out infinite alternate;
 }
 
-@keyframes heroAura{
-  from{transform:scale(.9) rotate(-6deg);opacity:.56}
-  to{transform:scale(1.14) rotate(10deg);opacity:.9}
+@keyframes auraMove{
+  from{transform:scale(.9) rotate(-8deg);opacity:.55}
+  to{transform:scale(1.12) rotate(10deg);opacity:.92}
 }
 
-.hero-inner{
+.hero-content{
   position:relative;
   z-index:3;
-  max-width:1280px;
+  max-width:1180px;
 }
 
-.hero-mark{
-  width:108px;
-  height:108px;
-  border-radius:50%;
-  border:1px solid rgba(209,173,114,.45);
-  display:grid;
-  place-items:center;
-  margin-bottom:32px;
-  background:rgba(255,255,255,.035);
-  box-shadow:0 0 90px rgba(209,173,114,.16);
-}
-
-.hero-mark span{
-  font-family:Georgia,serif;
-  font-size:38px;
-  color:#d1ad72;
+.hero-logo{
+  width:170px;
+  margin-bottom:30px;
+  filter:drop-shadow(0 20px 50px rgba(0,0,0,.5));
 }
 
 .hero h1{
-  max-width:1120px;
-  font-size:clamp(62px,11vw,178px);
-  line-height:.86;
-  letter-spacing:-.07em;
-  text-shadow:0 35px 100px rgba(0,0,0,.9);
+  font-size:clamp(64px,11vw,178px);
+  letter-spacing:-.075em;
+  max-width:1180px;
+  text-shadow:0 34px 100px rgba(0,0,0,.85);
 }
 
 .hero h1 em{
   display:block;
   font-style:italic;
   color:transparent;
-  -webkit-text-stroke:1px rgba(209,173,114,.82);
+  -webkit-text-stroke:1px rgba(209,173,114,.86);
 }
 
 .hero-copy{
   max-width:720px;
-  margin-top:30px;
+  margin-top:28px;
   font-size:21px;
-  color:rgba(255,248,241,.76);
+  color:rgba(255,248,241,.78);
 }
 
 .hero-signature{
-  margin-top:38px;
+  margin-top:34px;
   display:flex;
   align-items:center;
   gap:18px;
-  color:rgba(255,248,241,.62);
+  color:rgba(255,248,241,.68);
   letter-spacing:.18em;
   text-transform:uppercase;
   font-size:11px;
@@ -322,91 +237,66 @@ p{
   content:"";
   width:72px;
   height:1px;
-  background:#d1ad72;
+  background:var(--gold);
 }
 
-.hero-actions{
-  margin-top:38px;
-  display:flex;
-  gap:16px;
-  flex-wrap:wrap;
-}
-
-.hero-orbit{
+.hero-float-card{
   position:absolute;
-  right:8vw;
-  bottom:10vh;
-  width:320px;
-  height:320px;
-  border-radius:50%;
-  border:1px solid rgba(255,248,241,.12);
-  z-index:2;
+  right:5vw;
+  bottom:8vh;
+  z-index:3;
+  width:310px;
+  padding:24px;
+  border-radius:30px;
+  border:1px solid rgba(255,255,255,.16);
+  background:rgba(5,4,7,.48);
+  backdrop-filter:blur(24px);
+  box-shadow:0 30px 100px rgba(0,0,0,.5);
 }
 
-.hero-orbit::before,
-.hero-orbit::after{
-  content:"";
-  position:absolute;
-  border-radius:50%;
-  border:1px solid rgba(209,173,114,.18);
+.hero-float-card strong{
+  display:block;
+  font-family:Georgia,serif;
+  font-size:30px;
+  margin-bottom:10px;
 }
 
-.hero-orbit::before{
-  inset:42px;
+.hero-float-card span{
+  color:rgba(255,248,241,.7);
+  line-height:1.55;
+  font-size:14px;
 }
 
-.hero-orbit::after{
-  inset:92px;
-  background:rgba(255,255,255,.035);
-  backdrop-filter:blur(10px);
-}
-
-@media(max-width:900px){
+@media(max-width:950px){
   .hero{
-    padding:135px 22px 60px;
+    padding:130px 22px 70px;
     align-items:flex-end;
   }
 
-  .hero::before{
-    right:-28vw;
-    top:18vh;
-  }
-
-  .hero-mark{
-    width:82px;
-    height:82px;
-    margin-bottom:24px;
-  }
-
-  .hero-mark span{
-    font-size:30px;
+  .hero-logo{
+    width:135px;
   }
 
   .hero-copy{
     font-size:18px;
   }
 
-  .hero-orbit{
-    width:210px;
-    height:210px;
-    right:-70px;
-    bottom:120px;
-    opacity:.55;
+  .hero-float-card{
+    display:none;
   }
 }
 </style>
 
-<div class="hero-orbit"></div>
+<div class="hero-bg">
+  <img src="assets/team-collage.png" alt="Ink Therapy team and studio energy">
+</div>
 
-<div class="hero-inner">
+<div class="hero-aura"></div>
 
-  <div class="hero-mark">
-    <span>IT</span>
-  </div>
+<div class="hero-content">
+  <img class="hero-logo" src="assets/logo-white.png" alt="Ink Therapy logo">
 
-  <div class="eyebrow">
-    Fayetteville’s soft luxury tattoo studio
-  </div>
+  <div class="eyebrow">Fayetteville’s soft luxury tattoo studio</div>
 
   <h1>
     Art for the skin.
@@ -414,335 +304,316 @@ p{
   </h1>
 
   <p class="hero-copy">
-    Ink Therapy is a calm, inclusive tattoo sanctuary where custom art,
-    identity, beauty, and self-expression are treated with intention.
+    A calm, inclusive tattoo sanctuary where custom art, identity,
+    comfort, beauty, and self-expression are treated with intention.
   </p>
 
   <div class="hero-signature">
     Artist-owned • LGBTQIA+ friendly • Fayetteville, AR
   </div>
 
-  <div class="hero-actions">
-    <a href="contact.html" class="btn btn-primary">Book a Consult</a>
-    <a href="gallery.html" class="btn btn-secondary">Explore the Studio</a>
+  <div class="btn-row">
+    <a class="btn" href="contact/">Book a Consult</a>
+    <a class="btn" href="owner/">Meet Lex</a>
+    <a class="btn" href="services/">Explore Services</a>
   </div>
-
 </div>
 
+<div class="hero-float-card">
+  <strong>Not ordinary.</strong>
+  <span>A different kind of tattoo studio — softer, safer, more personal, and built around real care.</span>
+</div>
 </section>
-<!-- ===== HERO END ===== -->
-
 <!-- ===== PART 2 END ===== -->
 
-  <!-- ===== PART 3 START: IMMERSIVE SECTIONS ===== -->
-
-<section class="manifesto">
-
+  <!-- ===== PART 3 START: HOME CONTENT ===== -->
+<section class="intro">
 <style>
-
-.manifesto{
-  padding:130px 5vw;
+.intro{
+  padding:120px 5vw;
   background:
-    linear-gradient(
-      to bottom,
-      #050407,
-      #0f0912 52%,
-      #050407
-    );
+    linear-gradient(to bottom,#050407,#0f0912 55%,#050407);
 }
 
-.manifesto-grid{
+.intro-grid{
   display:grid;
   grid-template-columns:.9fr 1.1fr;
   gap:70px;
   align-items:center;
 }
 
-.big-line{
-  font-family:Georgia,serif;
-  font-size:clamp(42px,8vw,118px);
-  line-height:.95;
+.intro h2{
+  font-size:clamp(46px,8vw,118px);
+  letter-spacing:-.06em;
 }
 
-.big-line em{
-  color:#d1ad72;
+.intro h2 em{
+  color:var(--gold);
   font-style:italic;
 }
 
-.manifesto-card{
-  padding:50px;
+.intro-panel{
+  padding:48px;
   border-radius:44px;
-
-  border:1px solid rgba(255,255,255,.12);
-
+  border:1px solid rgba(255,255,255,.13);
   background:
-    radial-gradient(circle at top right, rgba(209,173,114,.12), transparent 42%),
-    rgba(255,255,255,.05);
-
+    radial-gradient(circle at top right,rgba(209,173,114,.12),transparent 42%),
+    rgba(255,255,255,.055);
   backdrop-filter:blur(22px);
-
-  box-shadow:0 35px 120px rgba(0,0,0,.42);
+  box-shadow:0 35px 120px rgba(0,0,0,.4);
 }
 
-.manifesto-card p{
+.intro-panel p{
   font-size:22px;
 }
 
-@media(max-width:950px){
-
-  .manifesto{
-    padding:90px 22px;
-  }
-
-  .manifesto-grid{
-    grid-template-columns:1fr;
-  }
-
+.path-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  margin-top:70px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:36px;
+  overflow:hidden;
+  background:rgba(255,255,255,.1);
 }
 
+.path-card{
+  min-height:250px;
+  padding:30px;
+  background:rgba(255,255,255,.045);
+  transition:.35s;
+}
+
+.path-card:hover{
+  background:
+    radial-gradient(circle at top right,rgba(209,173,114,.15),transparent 42%),
+    rgba(255,255,255,.075);
+}
+
+.path-card strong{
+  display:block;
+  font-family:Georgia,serif;
+  font-size:34px;
+  line-height:1;
+  margin-bottom:16px;
+}
+
+.path-card span{
+  color:rgba(255,248,241,.65);
+  line-height:1.6;
+  font-size:14px;
+}
+
+@media(max-width:950px){
+  .intro{padding:90px 22px}
+  .intro-grid,.path-grid{grid-template-columns:1fr}
+  .intro-panel{padding:34px}
+}
 </style>
 
-<div class="manifesto-grid">
-
+<div class="intro-grid">
   <div>
-
-    <div class="eyebrow">
-      The feeling
-    </div>
-
-    <div class="big-line">
-      Not rushed. Not intimidating. Not ordinary.<br>
-      Not a factory.<br>
-      <em>A sanctuary.</em>
-    </div>
-
+    <div class="eyebrow">The studio energy</div>
+    <h2>
+      Soft. Safe.<br>
+      <em>Seriously artistic.</em>
+    </h2>
   </div>
 
-  <div class="manifesto-card">
-
+  <div class="intro-panel">
     <p>
-      Ink Therapy was built for people who want a softer,
-      safer, more personal tattoo experience —
-      and artists who believe the energy of the room matters
-      just as much as the art itself.
+      Ink Therapy is for people who want a tattoo experience that feels personal,
+      intentional, and welcoming from the moment they walk in. The studio blends
+      custom tattoo work with calm energy, expressive art, and a strong sense of care.
     </p>
-
   </div>
-
 </div>
 
+<div class="path-grid">
+  <a class="path-card" href="services/">
+    <strong>Services</strong>
+    <span>Consults, appointments, walk-ins, deposits, and pricing expectations.</span>
+  </a>
+
+  <a class="path-card" href="owner/">
+    <strong>Lex</strong>
+    <span>Meet the owner and the heart behind Ink Therapy’s culture.</span>
+  </a>
+
+  <a class="path-card" href="team/">
+    <strong>Artists</strong>
+    <span>Find the right artist for your style, energy, and tattoo idea.</span>
+  </a>
+
+  <a class="path-card" href="booth-rental/">
+    <strong>Rental</strong>
+    <span>A beautiful studio home for artists who want independence and community.</span>
+  </a>
+</div>
 </section>
 
-<section class="collage">
-
+<section class="owner-preview">
 <style>
-
-.collage{
-  padding:70px 5vw 140px;
-  min-height:950px;
-}
-
-.collage-title{
-  position:relative;
-  z-index:2;
-  max-width:900px;
-}
-
-.card-cloud{
-  position:relative;
-  margin-top:60px;
-  min-height:680px;
-}
-
-.cloud-card{
-  position:absolute;
+.owner-preview{
+  padding:110px 5vw;
   overflow:hidden;
+}
 
-  border-radius:38px;
+.owner-wrap{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:60px;
+  align-items:center;
+}
 
-  border:1px solid rgba(255,255,255,.12);
-
+.owner-photo{
+  position:relative;
+  border-radius:44px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.13);
   box-shadow:0 40px 120px rgba(0,0,0,.55);
 }
 
-.cloud-card img{
+.owner-photo img{
   width:100%;
-  height:100%;
+  height:640px;
   object-fit:cover;
-  transition:1.2s ease;
+  filter:saturate(.95) contrast(1.04);
 }
 
-.cloud-card:hover img{
-  transform:scale(1.06);
-}
-
-.cloud-card::after{
+.owner-photo::after{
   content:"";
   position:absolute;
   inset:0;
-
-  background:
-    linear-gradient(
-      to top,
-      rgba(5,4,7,.72),
-      transparent 55%
-    );
+  background:linear-gradient(to top,rgba(5,4,7,.56),transparent 55%);
 }
 
-.c1{
-  width:38%;
-  height:560px;
-  left:0;
-  top:20px;
+.owner-copy h2{
+  font-size:clamp(46px,7vw,104px);
+  letter-spacing:-.06em;
 }
 
-.c2{
-  width:34%;
-  height:430px;
-  left:35%;
-  top:130px;
-}
-
-.c3{
-  width:28%;
-  height:520px;
-  right:0;
-  top:0;
-}
-
-.c4{
-  width:290px;
-  height:290px;
-  left:56%;
-  bottom:0;
-  border-radius:50%;
-}
-
-.caption-pill{
-  position:absolute;
-  left:7%;
-  bottom:46px;
-
-  z-index:3;
-
-  padding:18px 26px;
-
-  border-radius:999px;
-
-  border:1px solid rgba(255,255,255,.14);
-
-  background:rgba(5,4,7,.72);
-
-  backdrop-filter:blur(20px);
-
-  color:#fff8f1;
+.owner-copy p{
+  max-width:720px;
+  margin-top:24px;
+  font-size:20px;
 }
 
 @media(max-width:950px){
-
-  .collage{
-    padding:70px 22px 100px;
-    min-height:auto;
-  }
-
-  .card-cloud{
-    display:grid;
-    gap:18px;
-    min-height:0;
-  }
-
-  .cloud-card{
-    position:relative !important;
-    width:100% !important;
-    height:360px !important;
-    left:auto !important;
-    right:auto !important;
-    top:auto !important;
-    bottom:auto !important;
-    border-radius:32px !important;
-  }
-
-  .caption-pill{
-    position:relative;
-    left:auto;
-    bottom:auto;
-    margin-top:18px;
-    border-radius:24px;
-  }
-
+  .owner-preview{padding:90px 22px}
+  .owner-wrap{grid-template-columns:1fr}
+  .owner-photo img{height:520px}
 }
-
 </style>
 
-<div class="collage-title">
-
-  <div class="eyebrow">
-    Art • identity • softness • edge
+<div class="owner-wrap">
+  <div class="owner-photo">
+    <img src="assets/team-lex.png" alt="Lex, owner of Ink Therapy">
   </div>
 
-  <h2>
-    A studio that feels like the person you are becoming.
-  </h2>
+  <div class="owner-copy">
+    <div class="eyebrow">The heart behind the studio</div>
+    <h2>Built by Lex. Felt by everyone.</h2>
+    <p>
+      Ink Therapy reflects Lex’s belief that tattooing can be beautiful,
+      emotional, safe, expressive, and deeply human. This is a studio where
+      people are respected before the needle ever touches skin.
+    </p>
 
+    <div class="btn-row">
+      <a class="btn" href="owner/">About the Owner</a>
+      <a class="btn" href="team/">Meet the Artists</a>
+    </div>
+  </div>
 </div>
-
-<div class="card-cloud">
-
-  <div class="cloud-card c1">
-    <img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=1400&q=90">
-  </div>
-
-  <div class="cloud-card c2">
-    <img src="https://images.unsplash.com/photo-1601848714157-d845bb5c11ff?auto=format&fit=crop&w=1300&q=90">
-  </div>
-
-  <div class="cloud-card c3">
-    <img src="https://images.unsplash.com/photo-1590246814883-57c51153dcee?auto=format&fit=crop&w=1300&q=90">
-  </div>
-
-  <div class="cloud-card c4">
-    <img src="https://images.unsplash.com/photo-1586243287039-23f4c8e2e7ab?auto=format&fit=crop&w=900&q=90">
-  </div>
-
-  <div class="caption-pill">
-    Custom tattoos • calm energy • real care
-  </div>
-
-</div>
-
 </section>
-
 <!-- ===== PART 3 END ===== -->
 
-  <!-- ===== PART 4 START: FINAL CTA + FOOTER + JS ===== -->
-
-<section class="final-cta">
-
+  <!-- ===== PART 4 START: TEAM STRIP + CTA + FOOTER + JS ===== -->
+<section class="team-strip">
 <style>
+.team-strip{
+  padding:110px 5vw;
+  background:#050407;
+}
+
+.team-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:30px;
+  margin-bottom:40px;
+}
+
+.team-head h2{
+  font-size:clamp(44px,7vw,100px);
+  letter-spacing:-.06em;
+}
+
+.team-row{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:14px;
+}
+
+.artist-tile{
+  position:relative;
+  min-height:360px;
+  border-radius:32px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.12);
+  background:#111;
+  box-shadow:0 25px 90px rgba(0,0,0,.42);
+}
+
+.artist-tile img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.8s ease;
+}
+
+.artist-tile:hover img{
+  transform:scale(1.08);
+}
+
+.artist-tile::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(5,4,7,.78),transparent 55%);
+}
+
+.artist-tile span{
+  position:absolute;
+  left:18px;
+  bottom:18px;
+  z-index:2;
+  font-family:Georgia,serif;
+  font-size:24px;
+}
 
 .final-cta{
   padding:130px 5vw;
-
   background:
-    linear-gradient(rgba(5,4,7,.35),rgba(5,4,7,.92)),
-    url("https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?auto=format&fit=crop&w=2400&q=90")
-    center/cover;
+    radial-gradient(circle at 75% 24%,rgba(209,173,114,.16),transparent 28%),
+    linear-gradient(135deg,#050407,#120c14);
 }
 
 .cta-box{
-  max-width:1050px;
-
-  padding:60px;
-
+  max-width:1100px;
+  padding:58px;
   border-radius:46px;
-
   border:1px solid rgba(255,255,255,.14);
-
-  background:rgba(5,4,7,.56);
-
+  background:rgba(255,255,255,.055);
   backdrop-filter:blur(24px);
-
   box-shadow:0 40px 120px rgba(0,0,0,.55);
+}
+
+.cta-box h2{
+  font-size:clamp(46px,7vw,104px);
+  letter-spacing:-.06em;
 }
 
 .cta-box p{
@@ -753,79 +624,91 @@ p{
 
 .footer{
   padding:42px 5vw;
-
   display:flex;
   justify-content:space-between;
   gap:20px;
   flex-wrap:wrap;
-
   border-top:1px solid rgba(255,255,255,.08);
-
   color:rgba(255,248,241,.52);
-
   font-size:13px;
 }
 
-.footer a{
-  color:#fff8f1;
+.footer a{color:#fff8f1}
+
+@media(max-width:1050px){
+  .team-row{grid-template-columns:repeat(3,1fr)}
 }
 
-@media(max-width:900px){
-
-  .final-cta{
-    padding:90px 22px;
-  }
-
-  .cta-box{
-    padding:36px;
-    border-radius:34px;
-  }
-
+@media(max-width:700px){
+  .team-strip,.final-cta{padding:90px 22px}
+  .team-head{display:block}
+  .team-row{grid-template-columns:1fr 1fr}
+  .artist-tile{min-height:280px}
+  .cta-box{padding:34px;border-radius:34px}
 }
-
 </style>
 
-<div class="cta-box">
-
-  <div class="eyebrow">
-    Ready when you are
+<div class="team-head">
+  <div>
+    <div class="eyebrow">The artists</div>
+    <h2>Real people. Real care. Real art.</h2>
   </div>
-
-  <h2>
-    Bring the idea.<br>
-    Leave with something that feels like you.
-  </h2>
-
-  <p>
-    Book a consultation, meet the artists,
-    or experience the studio that’s redefining
-    what tattoo culture can feel like in Fayetteville.
-  </p>
-
-  <div class="btn-row">
-
-    <a href="contact.html" class="btn btn-primary">
-      Book a Consult
-    </a>
-
-    <a href="gallery.html" class="btn btn-secondary">
-      Explore the Work
-    </a>
-
-  </div>
-
+  <a class="btn" href="team/">View Team</a>
 </div>
 
+<div class="team-row">
+  <a class="artist-tile" href="owner/">
+    <img src="assets/team-lex.png" alt="Lex">
+    <span>Lex</span>
+  </a>
+
+  <a class="artist-tile" href="team/">
+    <img src="assets/team-perri.png" alt="Perri">
+    <span>Perri</span>
+  </a>
+
+  <a class="artist-tile" href="team/">
+    <img src="assets/team-shay.png" alt="Shay">
+    <span>Shay</span>
+  </a>
+
+  <a class="artist-tile" href="team/">
+    <img src="assets/team-rambo.png" alt="Rambo">
+    <span>Rambo</span>
+  </a>
+
+  <a class="artist-tile" href="team/">
+    <img src="assets/team-justin.png" alt="Justin">
+    <span>Justin</span>
+  </a>
+
+  <a class="artist-tile" href="team/">
+    <img src="assets/team-alejandro.png" alt="Alejandro">
+    <span>Alejandro</span>
+  </a>
+</div>
+</section>
+
+<section class="final-cta">
+  <div class="cta-box">
+    <div class="eyebrow">Ready when you are</div>
+    <h2>Bring the idea. Leave with something that feels like you.</h2>
+    <p>
+      Book a consultation, explore the artists, or step into a Fayetteville tattoo
+      studio built around comfort, identity, and custom work.
+    </p>
+
+    <div class="btn-row">
+      <a class="btn" href="contact/">Book a Consult</a>
+      <a class="btn" href="services/">View Services</a>
+    </div>
+  </div>
 </section>
 
 </main>
 
 <footer class="footer">
-
-  <span>
-    © Ink Therapy • Fayetteville, Arkansas
-  </span>
-
+  <span>© Ink Therapy • Fayetteville, Arkansas</span>
   <span>
     <a href="https://www.instagram.com/ink_therapy777/">Instagram</a>
     ·
@@ -833,40 +716,25 @@ p{
     ·
     <a href="https://www.tiktok.com/@inktherapy777">TikTok</a>
   </span>
-
 </footer>
 
 <script>
-
 const menuBtn = document.getElementById("menuBtn");
 const mobilePanel = document.getElementById("mobilePanel");
 
 menuBtn.addEventListener("click", () => {
-
   mobilePanel.classList.toggle("active");
-
-  menuBtn.textContent =
-    mobilePanel.classList.contains("active")
-    ? "×"
-    : "☰";
-
+  menuBtn.textContent = mobilePanel.classList.contains("active") ? "×" : "☰";
 });
 
 mobilePanel.querySelectorAll("a").forEach(link => {
-
   link.addEventListener("click", () => {
-
     mobilePanel.classList.remove("active");
-
     menuBtn.textContent = "☰";
-
   });
-
 });
-
 </script>
 
 </body>
 </html>
-
 <!-- ===== PART 4 END ===== -->
