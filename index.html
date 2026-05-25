@@ -1,457 +1,904 @@
-<!-- ===== PART 1 START: HEAD + HERO ===== -->
+<!-- ===== PART 1 START: HEAD + GLOBAL SYSTEM ===== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ink Therapy | Elevated Tattoo Studio in Fayetteville, AR</title>
-  <meta name="description" content="Ink Therapy is an artist-owned tattoo studio in Fayetteville, Arkansas creating a safe, relaxing, LGBTQIA+ friendly tattoo experience." />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="css/nav.css" />
+<title>Ink Therapy | Fayetteville Tattoo Sanctuary</title>
 
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{
-      font-family:Inter,Arial,sans-serif;
-      background:#07070a;
-      color:#f6eee7;
-      overflow-x:hidden;
-    }
-    img{max-width:100%;display:block}
-    section{position:relative;padding:110px 5vw}
-    .eyebrow{
-      color:#ff9dca;
-      letter-spacing:.22em;
-      text-transform:uppercase;
-      font-size:12px;
-      font-weight:800;
-      margin-bottom:18px;
-    }
-    h1,h2,h3{font-family:Georgia,serif;font-weight:500;line-height:.95}
-    h1{font-size:clamp(54px,9vw,140px);max-width:1050px}
-    h2{font-size:clamp(40px,6vw,86px);max-width:900px}
-    p{line-height:1.75;color:rgba(246,238,231,.78);font-size:17px}
-    .btn-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:15px 22px;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight:800;
-      letter-spacing:.06em;
-      text-transform:uppercase;
-      font-size:12px;
-    }
-    .btn.primary{
-      color:white;
-      background:linear-gradient(135deg,#ff7eb6,#8f7bff);
-      box-shadow:0 0 42px rgba(255,126,182,.35);
-    }
-    .btn.secondary{
-      color:#f6eee7;
-      border:1px solid rgba(255,255,255,.18);
-      background:rgba(255,255,255,.07);
-      backdrop-filter:blur(12px);
-    }
+<meta name="description" content="Ink Therapy is an artist-owned tattoo sanctuary in Fayetteville, Arkansas built around healing, creativity, comfort, identity, and custom tattoo artistry." />
 
-    .hero{
-      min-height:100vh;
-      display:flex;
-      align-items:end;
-      padding-top:150px;
-      background:
-        linear-gradient(90deg,rgba(7,7,10,.96) 0%,rgba(7,7,10,.68) 43%,rgba(7,7,10,.25) 100%),
-        linear-gradient(to top,rgba(7,7,10,1),rgba(7,7,10,.1) 45%),
-        url("https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=2200&q=85") center/cover;
-    }
-    .hero-content{max-width:1180px;position:relative;z-index:2}
-    .hero p{max-width:650px;margin-top:26px;font-size:20px}
-    .hero-card{
-      margin-top:46px;
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:1px;
-      max-width:900px;
-      background:rgba(255,255,255,.12);
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:28px;
-      overflow:hidden;
-      backdrop-filter:blur(18px);
-    }
-    .hero-card div{
-      padding:24px;
-      background:rgba(255,255,255,.06);
-    }
-    .hero-card strong{display:block;color:white;margin-bottom:8px}
-    .hero-card span{color:rgba(246,238,231,.68);font-size:14px;line-height:1.5}
+<link rel="stylesheet" href="css/nav.css" />
 
-    .float-orb{
-      position:absolute;
-      width:360px;height:360px;border-radius:50%;
-      background:radial-gradient(circle,#ff7eb6,transparent 65%);
-      filter:blur(40px);
-      opacity:.22;
-      right:8vw;bottom:10vh;
-      pointer-events:none;
-    }
+<style>
 
-    @media(max-width:800px){
-      section{padding:82px 22px}
-      .hero{align-items:center;padding-top:130px}
-      .hero-card{grid-template-columns:1fr}
-    }
-  </style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Inter,Arial,sans-serif;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(209,173,114,.08), transparent 28%),
+    radial-gradient(circle at 80% 20%, rgba(122,98,255,.14), transparent 34%),
+    radial-gradient(circle at 40% 90%, rgba(255,118,183,.08), transparent 28%),
+    #050407;
+  color:#fff8f1;
+  overflow-x:hidden;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+section{
+  position:relative;
+}
+
+.noise{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:9999;
+  opacity:.08;
+  background-image:url("https://grainy-gradients.vercel.app/noise.svg");
+}
+
+.eyebrow{
+  color:#d1ad72;
+  text-transform:uppercase;
+  letter-spacing:.24em;
+  font-size:11px;
+  font-weight:900;
+}
+
+h1,h2,h3{
+  font-family:Georgia,serif;
+  font-weight:500;
+  line-height:.9;
+}
+
+h1{
+  font-size:clamp(72px,13vw,200px);
+}
+
+h2{
+  font-size:clamp(48px,8vw,120px);
+}
+
+h3{
+  font-size:clamp(28px,5vw,58px);
+}
+
+p{
+  color:rgba(255,248,241,.68);
+  line-height:1.8;
+  font-size:17px;
+}
+
+.btn-row{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-top:34px;
+}
+
+.btn{
+  position:relative;
+  overflow:hidden;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  padding:16px 24px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.05);
+  backdrop-filter:blur(20px);
+  color:#fff8f1;
+  font-size:12px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  transition:.35s ease;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.04),
+    0 18px 60px rgba(0,0,0,.35);
+}
+
+.btn::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      120deg,
+      transparent,
+      rgba(209,173,114,.35),
+      transparent
+    );
+  transform:translateX(-120%);
+  transition:.55s ease;
+}
+
+.btn:hover::before{
+  transform:translateX(120%);
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  border-color:rgba(209,173,114,.58);
+  box-shadow:
+    0 0 0 1px rgba(209,173,114,.28),
+    0 30px 90px rgba(0,0,0,.52),
+    0 0 50px rgba(209,173,114,.12);
+}
+
+.btn-primary{
+  background:
+    linear-gradient(135deg,rgba(255,248,241,.12),rgba(209,173,114,.08)),
+    rgba(5,4,7,.72);
+}
+
+.btn-secondary{
+  background:rgba(255,255,255,.04);
+}
+
+@media(max-width:800px){
+
+  .btn{
+    width:100%;
+  }
+
+}
+
+</style>
 </head>
 
 <body>
-  <header class="site-header">
-    <a class="brand" href="index.html">INK <span>THERAPY</span></a>
 
-    <nav class="desktop-nav">
-      <a href="#experience">Experience</a>
-      <a href="#services">Services</a>
-      <a href="#artists">Artists</a>
-      <a href="booth-rental.html">Booth Rental</a>
-      <a href="#contact" class="nav-cta">Book Consult</a>
-    </nav>
+<div class="noise"></div>
 
-    <button class="menu-btn" id="menuBtn" aria-label="Open Menu">☰</button>
-  </header>
-
-  <div class="mobile-panel" id="mobilePanel">
-    <a href="#experience">Experience</a>
-    <a href="#services">Services</a>
-    <a href="#artists">Artists</a>
-    <a href="booth-rental.html">Booth Rental</a>
-    <a href="#contact" class="nav-cta">Book Consult</a>
-  </div>
-
-  <main>
-    <section class="hero">
-      <div class="float-orb"></div>
-      <div class="hero-content">
-        <div class="eyebrow">Fayetteville, Arkansas • Artist-owned tattoo studio</div>
-        <h1>Healing through ink, designed like a luxury ritual.</h1>
-        <p>
-          Ink Therapy is a safe, relaxing, LGBTQIA+ friendly tattoo studio where custom art,
-          calm energy, and real human connection replace the old-school tattoo-shop attitude.
-        </p>
-
-        <div class="btn-row">
-          <a class="btn primary" href="mailto:inktherapy777@gmail.com?subject=Tattoo%20Consult%20Request">Request a Consult</a>
-          <a class="btn secondary" href="#services">Explore Services</a>
-        </div>
-
-        <div class="hero-card">
-          <div><strong>Safe by design</strong><span>A welcoming studio for every body, every story, and every identity.</span></div>
-          <div><strong>Custom work</strong><span>Consult-led tattoos shaped around placement, meaning, style, and flow.</span></div>
-          <div><strong>Spa-like energy</strong><span>Soft, intentional, clean, and calm — not intimidating or rushed.</span></div>
-        </div>
-      </div>
-    </section>
 <!-- ===== PART 1 END ===== -->
 
-    <!-- ===== PART 2 START: EXPERIENCE + SERVICES + ARTISTS ===== -->
-    <section id="experience">
-      <style>
-        .split{
-          display:grid;
-          grid-template-columns:1.05fr .95fr;
-          gap:60px;
-          align-items:center;
-        }
-        .image-stack{
-          position:relative;
-          min-height:620px;
-        }
-        .image-stack img{
-          position:absolute;
-          border-radius:34px;
-          object-fit:cover;
-          box-shadow:0 30px 90px rgba(0,0,0,.55);
-          border:1px solid rgba(255,255,255,.13);
-        }
-        .image-stack .one{
-          width:72%;
-          height:520px;
-          right:0;
-          top:0;
-        }
-        .image-stack .two{
-          width:52%;
-          height:330px;
-          left:0;
-          bottom:0;
-        }
-        .quote-card{
-          margin-top:32px;
-          padding:30px;
-          border-radius:28px;
-          background:linear-gradient(145deg,rgba(255,255,255,.1),rgba(255,255,255,.04));
-          border:1px solid rgba(255,255,255,.13);
-        }
-        .quote-card strong{color:white}
+  <!-- ===== PART 2 START: NAV + HERO ===== -->
 
-        .service-grid{
-          display:grid;
-          grid-template-columns:repeat(3,1fr);
-          gap:18px;
-          margin-top:46px;
-        }
-        .service-card{
-          min-height:320px;
-          border-radius:34px;
-          padding:28px;
-          background:
-            linear-gradient(to top,rgba(7,7,10,.92),rgba(7,7,10,.15)),
-            var(--bg) center/cover;
-          border:1px solid rgba(255,255,255,.13);
-          display:flex;
-          flex-direction:column;
-          justify-content:end;
-          overflow:hidden;
-        }
-        .service-card h3{font-size:34px;margin-bottom:12px}
-        .service-card p{font-size:15px}
+<header class="site-header">
 
-        .artist-band{
-          margin-top:46px;
-          display:grid;
-          grid-template-columns:1fr 1fr;
-          gap:18px;
-        }
-        .artist-feature{
-          min-height:520px;
-          border-radius:38px;
-          padding:34px;
-          display:flex;
-          flex-direction:column;
-          justify-content:end;
-          background:
-            linear-gradient(to top,rgba(7,7,10,.94),rgba(7,7,10,.2)),
-            url("https://images.unsplash.com/photo-1562962230-16e4623d36e6?auto=format&fit=crop&w=1400&q=85") center/cover;
-          border:1px solid rgba(255,255,255,.14);
-        }
-        .artist-list{
-          display:grid;
-          gap:18px;
-        }
-        .mini-card{
-          border-radius:30px;
-          padding:28px;
-          background:rgba(255,255,255,.07);
-          border:1px solid rgba(255,255,255,.13);
-        }
+  <a href="index.html" class="brand">
+    INK <span>THERAPY</span>
+  </a>
 
-        @media(max-width:900px){
-          .split,.artist-band{grid-template-columns:1fr}
-          .service-grid{grid-template-columns:1fr}
-          .image-stack{min-height:520px}
-          .image-stack .one{width:82%;height:410px}
-          .image-stack .two{width:62%;height:260px}
-        }
-      </style>
+  <nav class="desktop-nav">
+    <a href="team.html">Artists</a>
+    <a href="services.html">Services</a>
+    <a href="aftercare.html">Aftercare</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="booth-rental.html">Booth Rental</a>
+    <a href="contact.html" class="nav-cta">Book</a>
+  </nav>
 
-      <div class="split">
-        <div>
-          <div class="eyebrow">Not just a tattoo appointment</div>
-          <h2>A softer, safer, more personal way to get tattooed.</h2>
-          <p>
-            Ink Therapy feels different the moment you walk in. The studio is artist-owned,
-            community-centered, and built around comfort — a place where the experience matters
-            as much as the finished piece.
-          </p>
+  <button class="menu-btn" id="menuBtn">☰</button>
 
-          <div class="quote-card">
-            <p><strong>Studio philosophy:</strong> tattoos can be art, memory, reclamation, celebration,
-            identity, grief, softness, power, and healing — sometimes all at once.</p>
-          </div>
-        </div>
+</header>
 
-        <div class="image-stack">
-          <img class="one" src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=1400&q=85" alt="Tattoo artist working in a calm studio">
-          <img class="two" src="https://images.unsplash.com/photo-1590246814883-57c51153dcee?auto=format&fit=crop&w=1000&q=85" alt="Elegant tattoo studio details">
-        </div>
-      </div>
-    </section>
+<div class="mobile-panel" id="mobilePanel">
 
-    <section id="services">
-      <div class="eyebrow">Services</div>
-      <h2>Custom tattoos, consults, walk-ins, and intentional artist matching.</h2>
+  <a href="team.html">Artists</a>
+  <a href="services.html">Services</a>
+  <a href="aftercare.html">Aftercare</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="booth-rental.html">Booth Rental</a>
+  <a href="contact.html">Book</a>
 
-      <div class="service-grid">
-        <article class="service-card" style="--bg:url('https://images.unsplash.com/photo-1601848714157-d845bb5c11ff?auto=format&fit=crop&w=1200&q=85')">
-          <h3>Consults</h3>
-          <p>Most tattoo appointments begin with a consult to discuss placement, scale, concept, style, and skin flow.</p>
-        </article>
+</div>
 
-        <article class="service-card" style="--bg:url('https://images.unsplash.com/photo-1600705722908-bab05c554b5e?auto=format&fit=crop&w=1200&q=85')">
-          <h3>Appointments</h3>
-          <p>Custom tattoo sessions designed with care, clarity, and respect for the story behind the piece.</p>
-        </article>
+<main>
 
-        <article class="service-card" style="--bg:url('https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=1200&q=85')">
-          <h3>Walk-ins</h3>
-          <p>Clean, thoughtful walk-in work when availability allows — perfect for smaller pieces and flash moments.</p>
-        </article>
-      </div>
+<section class="hero">
 
-      <div class="btn-row">
-        <a class="btn primary" href="mailto:inktherapy777@gmail.com?subject=Tattoo%20Consult%20Request">Start With a Consult</a>
-        <a class="btn secondary" href="services.html">View Service Details</a>
-      </div>
-    </section>
+<style>
 
-    <section id="artists">
-      <div class="eyebrow">Artists + Energy</div>
-      <h2>Led by Lex Ly. Built for artists who care about people.</h2>
+.hero{
+  min-height:100vh;
+  padding:150px 5vw 70px;
+  display:flex;
+  align-items:end;
+  overflow:hidden;
+}
 
-      <div class="artist-band">
-        <article class="artist-feature">
-          <h3>Lex Ly</h3>
-          <p>Owner / Artist. A creative force behind Ink Therapy’s calm, inclusive, elevated studio culture.</p>
-        </article>
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
 
-        <div class="artist-list">
-          <article class="mini-card">
-            <h3>Fine-line, watercolor, illustrative + custom work</h3>
-            <p>Ink Therapy is known locally for a relaxed, elevated approach with artists covering expressive styles.</p>
-          </article>
-          <article class="mini-card">
-            <h3>Booth rental with real studio energy</h3>
-            <p>For artists who want independence without isolation — a polished space with community, warmth, and standards.</p>
-          </article>
-          <article class="mini-card">
-            <h3>Inclusive by default</h3>
-            <p>Queer-friendly, body-respectful, identity-affirming, and rooted in care.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,4,7,.94) 0%,
+      rgba(5,4,7,.55) 44%,
+      rgba(5,4,7,.22) 100%
+    ),
+
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(5,4,7,.72)
+    ),
+
+    url("https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=2400&q=90")
+    center/cover;
+
+  opacity:.62;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(circle at center, transparent 0%, rgba(0,0,0,.52) 80%);
+
+  pointer-events:none;
+}
+
+.ink-bloom{
+  position:absolute;
+  width:760px;
+  height:760px;
+  right:-120px;
+  top:60px;
+  border-radius:50%;
+
+  background:
+    radial-gradient(circle, rgba(209,173,114,.22), transparent 24%),
+    radial-gradient(circle at 30% 60%, rgba(122,98,255,.22), transparent 36%),
+    radial-gradient(circle at 72% 70%, rgba(255,118,183,.14), transparent 34%);
+
+  filter:blur(65px);
+
+  animation:floatGlow 8s ease-in-out infinite alternate;
+}
+
+@keyframes floatGlow{
+  from{
+    transform:scale(.92) rotate(0deg);
+    opacity:.48;
+  }
+  to{
+    transform:scale(1.12) rotate(12deg);
+    opacity:.82;
+  }
+}
+
+.hero-inner{
+  position:relative;
+  z-index:3;
+  max-width:1250px;
+}
+
+.hero-line{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:20px;
+}
+
+.hero-line::before{
+  content:"";
+  width:58px;
+  height:1px;
+  background:#d1ad72;
+}
+
+.hero h1{
+  text-shadow:0 30px 90px rgba(0,0,0,.8);
+}
+
+.hero h1 span{
+  display:block;
+  color:transparent;
+  -webkit-text-stroke:1px rgba(209,173,114,.75);
+}
+
+.hero-copy{
+  max-width:700px;
+  margin-top:28px;
+  font-size:21px;
+}
+
+.hero-card-row{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+
+  margin-top:52px;
+  max-width:980px;
+
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:34px;
+
+  overflow:hidden;
+
+  background:rgba(255,255,255,.1);
+
+  backdrop-filter:blur(20px);
+
+  box-shadow:0 35px 120px rgba(0,0,0,.5);
+}
+
+.hero-card{
+  padding:34px;
+  min-height:180px;
+
+  background:rgba(255,255,255,.05);
+
+  transition:.35s;
+}
+
+.hero-card:hover{
+  background:
+    radial-gradient(circle at top right, rgba(209,173,114,.14), transparent 42%),
+    rgba(255,255,255,.08);
+}
+
+.hero-card strong{
+  display:block;
+  font-family:Georgia,serif;
+  font-size:34px;
+  margin-bottom:16px;
+}
+
+.hero-card span{
+  color:rgba(255,248,241,.65);
+  line-height:1.7;
+  font-size:15px;
+}
+
+.scroll-note{
+  position:absolute;
+  right:5vw;
+  bottom:60px;
+  writing-mode:vertical-rl;
+  text-transform:uppercase;
+  letter-spacing:.22em;
+  font-size:11px;
+  color:rgba(255,255,255,.4);
+}
+
+@media(max-width:950px){
+
+  .hero{
+    padding:130px 22px 50px;
+  }
+
+  .hero-card-row{
+    grid-template-columns:1fr;
+  }
+
+  .scroll-note{
+    display:none;
+  }
+
+}
+
+</style>
+
+<div class="ink-bloom"></div>
+
+<div class="hero-inner">
+
+  <div class="hero-line eyebrow">
+    Fayetteville Tattoo Sanctuary
+  </div>
+
+  <h1>
+    Soft space.<br>
+    <span>Permanent art.</span>
+  </h1>
+
+  <p class="hero-copy">
+    A luxury-feeling tattoo studio built around comfort, creativity,
+    identity, healing, and custom artistry —
+    designed to feel more like a private ritual than a traditional tattoo shop.
+  </p>
+
+  <div class="btn-row">
+
+    <a href="contact.html" class="btn btn-primary">
+      Book a Consult
+    </a>
+
+    <a href="team.html" class="btn btn-secondary">
+      Meet the Artists
+    </a>
+
+  </div>
+
+  <div class="hero-card-row">
+
+    <a href="services.html" class="hero-card">
+      <strong>Get Tattooed</strong>
+      <span>
+        Custom pieces, consultations, walk-ins,
+        and artist matching.
+      </span>
+    </a>
+
+    <a href="booth-rental.html" class="hero-card">
+      <strong>Booth Rental</strong>
+      <span>
+        For artists who want independence inside a
+        beautiful, intentional studio culture.
+      </span>
+    </a>
+
+    <a href="aftercare.html" class="hero-card">
+      <strong>Feel Prepared</strong>
+      <span>
+        Deposits, prep, aftercare, FAQs,
+        and what to expect.
+      </span>
+    </a>
+
+  </div>
+
+</div>
+
+<div class="scroll-note">
+  a different kind of tattoo shop
+</div>
+
+</section>
+
 <!-- ===== PART 2 END ===== -->
 
-    <!-- ===== PART 3 START: CTA + CONTACT + JS ===== -->
-    <section id="contact">
-      <style>
-        .contact-wrap{
-          display:grid;
-          grid-template-columns:1fr 1fr;
-          gap:22px;
-          align-items:stretch;
-        }
-        .contact-panel{
-          border-radius:38px;
-          padding:42px;
-          background:
-            radial-gradient(circle at top right,rgba(255,126,182,.2),transparent 42%),
-            rgba(255,255,255,.07);
-          border:1px solid rgba(255,255,255,.14);
-        }
-        .info-line{
-          padding:18px 0;
-          border-bottom:1px solid rgba(255,255,255,.12);
-        }
-        .info-line strong{display:block;color:white;margin-bottom:5px}
-        .request-box{
-          border-radius:38px;
-          padding:42px;
-          background:
-            linear-gradient(to top,rgba(7,7,10,.96),rgba(7,7,10,.22)),
-            url("https://images.unsplash.com/photo-1586243287039-23f4c8e2e7ab?auto=format&fit=crop&w=1400&q=85") center/cover;
-          border:1px solid rgba(255,255,255,.14);
-          min-height:560px;
-          display:flex;
-          flex-direction:column;
-          justify-content:end;
-        }
-        .footer{
-          padding:42px 5vw;
-          border-top:1px solid rgba(255,255,255,.1);
-          display:flex;
-          justify-content:space-between;
-          gap:20px;
-          flex-wrap:wrap;
-          color:rgba(246,238,231,.62);
-          font-size:13px;
-        }
-        .footer a{color:#f6eee7;text-decoration:none}
-        @media(max-width:900px){
-          .contact-wrap{grid-template-columns:1fr}
-        }
-      </style>
+  <!-- ===== PART 3 START: IMMERSIVE SECTIONS ===== -->
 
-      <div class="contact-wrap">
-        <div class="contact-panel">
-          <div class="eyebrow">Book the room. Start the piece.</div>
-          <h2>Your next tattoo should feel this good from the beginning.</h2>
-          <p>
-            Send the idea, placement, approximate size, reference direction, and preferred artist if you have one.
-            The studio will guide the next step with care.
-          </p>
+<section class="manifesto">
 
-          <div class="info-line">
-            <strong>Studio</strong>
-            <span>125 E Township St, Fayetteville, AR 72703</span>
-          </div>
-          <div class="info-line">
-            <strong>Hours</strong>
-            <span>Monday–Saturday, 11 AM–8 PM • Sunday closed</span>
-          </div>
-          <div class="info-line">
-            <strong>Phone</strong>
-            <span>(479) 841-2576</span>
-          </div>
-          <div class="info-line">
-            <strong>Deposit</strong>
-            <span>$50 deposit required to book tattoos.</span>
-          </div>
+<style>
 
-          <div class="btn-row">
-            <a class="btn primary" href="mailto:inktherapy777@gmail.com?subject=Tattoo%20Consult%20Request&body=Hi%20Ink%20Therapy%2C%0A%0AI%27d%20like%20to%20request%20a%20tattoo%20consult.%0A%0AIdea%3A%0APlacement%3A%0ASize%3A%0APreferred%20artist%3A%0AAvailability%3A">Email Consult Request</a>
-            <a class="btn secondary" href="https://www.instagram.com/ink_therapy777/">Instagram</a>
-          </div>
-        </div>
+.manifesto{
+  padding:130px 5vw;
+  background:
+    linear-gradient(
+      to bottom,
+      #050407,
+      #0f0912 52%,
+      #050407
+    );
+}
 
-        <div class="request-box">
-          <div class="eyebrow">A studio people remember</div>
-          <h2>Calm. Clean. Creative. Completely Ink Therapy.</h2>
-          <p>
-            A Fayetteville tattoo destination for people who want art without intimidation —
-            and artists who want a space that feels as intentional as their work.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
+.manifesto-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:70px;
+  align-items:center;
+}
 
-  <footer class="footer">
-    <span>© Ink Therapy • Fayetteville, Arkansas</span>
-    <span>
-      <a href="https://www.instagram.com/ink_therapy777/">Instagram</a> ·
-      <a href="https://www.facebook.com/inktherapy777">Facebook</a> ·
-      <a href="https://www.tiktok.com/@inktherapy777">TikTok</a>
-    </span>
-  </footer>
+.big-line{
+  font-family:Georgia,serif;
+  font-size:clamp(42px,8vw,118px);
+  line-height:.95;
+}
 
-  <script>
-    const menuBtn = document.getElementById("menuBtn");
-    const mobilePanel = document.getElementById("mobilePanel");
+.big-line em{
+  color:#d1ad72;
+  font-style:italic;
+}
 
-    menuBtn.addEventListener("click", () => {
-      mobilePanel.classList.toggle("active");
-      menuBtn.textContent = mobilePanel.classList.contains("active") ? "×" : "☰";
-    });
+.manifesto-card{
+  padding:50px;
+  border-radius:44px;
 
-    mobilePanel.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        mobilePanel.classList.remove("active");
-        menuBtn.textContent = "☰";
-      });
-    });
-  </script>
+  border:1px solid rgba(255,255,255,.12);
+
+  background:
+    radial-gradient(circle at top right, rgba(209,173,114,.12), transparent 42%),
+    rgba(255,255,255,.05);
+
+  backdrop-filter:blur(22px);
+
+  box-shadow:0 35px 120px rgba(0,0,0,.42);
+}
+
+.manifesto-card p{
+  font-size:22px;
+}
+
+@media(max-width:950px){
+
+  .manifesto{
+    padding:90px 22px;
+  }
+
+  .manifesto-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+</style>
+
+<div class="manifesto-grid">
+
+  <div>
+
+    <div class="eyebrow">
+      The feeling
+    </div>
+
+    <div class="big-line">
+      Not a biker bar.<br>
+      Not a factory.<br>
+      <em>A sanctuary.</em>
+    </div>
+
+  </div>
+
+  <div class="manifesto-card">
+
+    <p>
+      Ink Therapy was built for people who want a softer,
+      safer, more personal tattoo experience —
+      and artists who believe the energy of the room matters
+      just as much as the art itself.
+    </p>
+
+  </div>
+
+</div>
+
+</section>
+
+<section class="collage">
+
+<style>
+
+.collage{
+  padding:70px 5vw 140px;
+  min-height:950px;
+}
+
+.collage-title{
+  position:relative;
+  z-index:2;
+  max-width:900px;
+}
+
+.card-cloud{
+  position:relative;
+  margin-top:60px;
+  min-height:680px;
+}
+
+.cloud-card{
+  position:absolute;
+  overflow:hidden;
+
+  border-radius:38px;
+
+  border:1px solid rgba(255,255,255,.12);
+
+  box-shadow:0 40px 120px rgba(0,0,0,.55);
+}
+
+.cloud-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:1.2s ease;
+}
+
+.cloud-card:hover img{
+  transform:scale(1.06);
+}
+
+.cloud-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(5,4,7,.72),
+      transparent 55%
+    );
+}
+
+.c1{
+  width:38%;
+  height:560px;
+  left:0;
+  top:20px;
+}
+
+.c2{
+  width:34%;
+  height:430px;
+  left:35%;
+  top:130px;
+}
+
+.c3{
+  width:28%;
+  height:520px;
+  right:0;
+  top:0;
+}
+
+.c4{
+  width:290px;
+  height:290px;
+  left:56%;
+  bottom:0;
+  border-radius:50%;
+}
+
+.caption-pill{
+  position:absolute;
+  left:7%;
+  bottom:46px;
+
+  z-index:3;
+
+  padding:18px 26px;
+
+  border-radius:999px;
+
+  border:1px solid rgba(255,255,255,.14);
+
+  background:rgba(5,4,7,.72);
+
+  backdrop-filter:blur(20px);
+
+  color:#fff8f1;
+}
+
+@media(max-width:950px){
+
+  .collage{
+    padding:70px 22px 100px;
+    min-height:auto;
+  }
+
+  .card-cloud{
+    display:grid;
+    gap:18px;
+    min-height:0;
+  }
+
+  .cloud-card{
+    position:relative !important;
+    width:100% !important;
+    height:360px !important;
+    left:auto !important;
+    right:auto !important;
+    top:auto !important;
+    bottom:auto !important;
+    border-radius:32px !important;
+  }
+
+  .caption-pill{
+    position:relative;
+    left:auto;
+    bottom:auto;
+    margin-top:18px;
+    border-radius:24px;
+  }
+
+}
+
+</style>
+
+<div class="collage-title">
+
+  <div class="eyebrow">
+    Art • identity • softness • edge
+  </div>
+
+  <h2>
+    A studio that feels like the person you are becoming.
+  </h2>
+
+</div>
+
+<div class="card-cloud">
+
+  <div class="cloud-card c1">
+    <img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=1400&q=90">
+  </div>
+
+  <div class="cloud-card c2">
+    <img src="https://images.unsplash.com/photo-1601848714157-d845bb5c11ff?auto=format&fit=crop&w=1300&q=90">
+  </div>
+
+  <div class="cloud-card c3">
+    <img src="https://images.unsplash.com/photo-1590246814883-57c51153dcee?auto=format&fit=crop&w=1300&q=90">
+  </div>
+
+  <div class="cloud-card c4">
+    <img src="https://images.unsplash.com/photo-1586243287039-23f4c8e2e7ab?auto=format&fit=crop&w=900&q=90">
+  </div>
+
+  <div class="caption-pill">
+    Custom tattoos • calm energy • real care
+  </div>
+
+</div>
+
+</section>
+
+<!-- ===== PART 3 END ===== -->
+
+  <!-- ===== PART 4 START: FINAL CTA + FOOTER + JS ===== -->
+
+<section class="final-cta">
+
+<style>
+
+.final-cta{
+  padding:130px 5vw;
+
+  background:
+    linear-gradient(rgba(5,4,7,.35),rgba(5,4,7,.92)),
+    url("https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?auto=format&fit=crop&w=2400&q=90")
+    center/cover;
+}
+
+.cta-box{
+  max-width:1050px;
+
+  padding:60px;
+
+  border-radius:46px;
+
+  border:1px solid rgba(255,255,255,.14);
+
+  background:rgba(5,4,7,.56);
+
+  backdrop-filter:blur(24px);
+
+  box-shadow:0 40px 120px rgba(0,0,0,.55);
+}
+
+.cta-box p{
+  max-width:720px;
+  margin-top:24px;
+  font-size:20px;
+}
+
+.footer{
+  padding:42px 5vw;
+
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+
+  border-top:1px solid rgba(255,255,255,.08);
+
+  color:rgba(255,248,241,.52);
+
+  font-size:13px;
+}
+
+.footer a{
+  color:#fff8f1;
+}
+
+@media(max-width:900px){
+
+  .final-cta{
+    padding:90px 22px;
+  }
+
+  .cta-box{
+    padding:36px;
+    border-radius:34px;
+  }
+
+}
+
+</style>
+
+<div class="cta-box">
+
+  <div class="eyebrow">
+    Ready when you are
+  </div>
+
+  <h2>
+    Bring the idea.<br>
+    Leave with something that feels like you.
+  </h2>
+
+  <p>
+    Book a consultation, meet the artists,
+    or experience the studio that’s redefining
+    what tattoo culture can feel like in Fayetteville.
+  </p>
+
+  <div class="btn-row">
+
+    <a href="contact.html" class="btn btn-primary">
+      Book a Consult
+    </a>
+
+    <a href="gallery.html" class="btn btn-secondary">
+      Explore the Work
+    </a>
+
+  </div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer class="footer">
+
+  <span>
+    © Ink Therapy • Fayetteville, Arkansas
+  </span>
+
+  <span>
+    <a href="https://www.instagram.com/ink_therapy777/">Instagram</a>
+    ·
+    <a href="https://www.facebook.com/inktherapy777">Facebook</a>
+    ·
+    <a href="https://www.tiktok.com/@inktherapy777">TikTok</a>
+  </span>
+
+</footer>
+
+<script>
+
+const menuBtn = document.getElementById("menuBtn");
+const mobilePanel = document.getElementById("mobilePanel");
+
+menuBtn.addEventListener("click", () => {
+
+  mobilePanel.classList.toggle("active");
+
+  menuBtn.textContent =
+    mobilePanel.classList.contains("active")
+    ? "×"
+    : "☰";
+
+});
+
+mobilePanel.querySelectorAll("a").forEach(link => {
+
+  link.addEventListener("click", () => {
+
+    mobilePanel.classList.remove("active");
+
+    menuBtn.textContent = "☰";
+
+  });
+
+});
+
+</script>
+
 </body>
 </html>
-<!-- ===== PART 3 END ===== -->
+
+<!-- ===== PART 4 END ===== -->
