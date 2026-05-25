@@ -1,1 +1,99 @@
+/* ===== PART 1 START: SHARED NAV CSS ===== */
+:root{
+  --ink:#07070a;
+  --cream:#f6eee7;
+  --rose:#ff7eb6;
+  --violet:#8f7bff;
+  --gold:#d9b978;
+  --glass:rgba(255,255,255,.08);
+  --line:rgba(255,255,255,.14);
+}
 
+.site-header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  padding:18px 5vw;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:linear-gradient(to bottom,rgba(7,7,10,.82),rgba(7,7,10,.12));
+  backdrop-filter:blur(16px);
+}
+
+.brand{
+  color:var(--cream);
+  text-decoration:none;
+  letter-spacing:.22em;
+  font-weight:800;
+  font-size:14px;
+}
+
+.brand span{
+  color:var(--rose);
+}
+
+.desktop-nav{
+  display:flex;
+  gap:26px;
+  align-items:center;
+}
+
+.desktop-nav a,
+.mobile-panel a{
+  color:var(--cream);
+  text-decoration:none;
+  font-size:13px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  opacity:.86;
+}
+
+.nav-cta{
+  padding:12px 18px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--rose),var(--violet));
+  color:white!important;
+  opacity:1!important;
+  box-shadow:0 0 28px rgba(255,126,182,.28);
+}
+
+.menu-btn{
+  display:none;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:var(--glass);
+  color:var(--cream);
+  font-size:22px;
+}
+
+.mobile-panel{
+  position:fixed;
+  inset:0;
+  z-index:999;
+  background:
+    radial-gradient(circle at top right,rgba(255,126,182,.24),transparent 35%),
+    radial-gradient(circle at bottom left,rgba(143,123,255,.25),transparent 35%),
+    rgba(7,7,10,.96);
+  backdrop-filter:blur(22px);
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:26px;
+}
+
+.mobile-panel.active{
+  display:flex;
+}
+
+@media(max-width:900px){
+  .desktop-nav{display:none;}
+  .menu-btn{display:block;}
+}
+/* ===== PART 1 END ===== */
