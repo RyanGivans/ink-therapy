@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tattoo Aftercare | Ink Therapy & Associates</title>
+  <meta name="description" content="Tattoo aftercare instructions from Ink Therapy & Associates. Learn how to clean, moisturize, protect, and heal your tattoo properly." />
+
+  <style>
+    :root {
+      --bg: #070707;
+      --bg-soft: #111111;
+      --bg-card: rgba(255,255,255,.06);
+      --text: #f4efe8;
+      --muted: #b7afa3;
+      --gold: #c7a35a;
+      --gold-soft: rgba(199,163,90,.18);
+      --line: rgba(255,255,255,.12);
+      --danger: #d66f56;
+      --shadow: 0 30px 80px rgba(0,0,0,.45);
+      --radius: 28px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(199,163,90,.16), transparent 28%),
+        radial-gradient(circle at 80% 0%, rgba(255,255,255,.07), transparent 24%),
+        linear-gradient(180deg, #050505 0%, #0b0b0b 45%, #050505 100%);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 54px 54px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.8), transparent 75%);
+      z-index: -1;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(18px);
+      background: rgba(5,5,5,.72);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 220px;
+    }
+
+    .brand-mark {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 18px rgba(199,163,90,.18));
+    }
+
+    .brand-text {
+      line-height: 1.05;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 17px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .brand-text span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      margin-top: 5px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-size: 13px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .nav-links a {
+      transition: color .25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--gold);
+    }
+
+    .nav-cta {
+      padding: 13px 18px;
+      border: 1px solid rgba(199,163,90,.55);
+      border-radius: 999px;
+      color: var(--text);
+      background: linear-gradient(135deg, rgba(199,163,90,.18), rgba(255,255,255,.03));
+      box-shadow: 0 0 30px rgba(199,163,90,.08);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 76vh;
+      display: grid;
+      place-items: center;
+      padding: 92px 0 70px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.92) 0%, rgba(0,0,0,.74) 42%, rgba(0,0,0,.42) 100%),
+        url("../assets/aftercare-hero.jpg");
+      background-size: cover;
+      background-position: center;
+      opacity: .85;
+      transform: scale(1.04);
+      z-index: -2;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 240px;
+      background: linear-gradient(to bottom, transparent, var(--bg));
+      z-index: -1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: .26em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 42px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    h1 {
+      font-size: clamp(48px, 8vw, 104px);
+      line-height: .9;
+      letter-spacing: -.06em;
+      text-transform: uppercase;
+      max-width: 820px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 22px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      font-size: 13px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      transition: transform .25s ease, border-color .25s ease, background .25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      border-color: rgba(199,163,90,.7);
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #080808;
+      border-color: var(--gold);
+      font-weight: 700;
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.1), rgba(255,255,255,.045));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 0%, rgba(199,163,90,.22), transparent 35%);
+      pointer-events: none;
+    }
+
+    .quick-title {
+      position: relative;
+      font-size: 14px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .quick-list {
+      position: relative;
+      display: grid;
+      gap: 14px;
+      list-style: none;
+    }
+
+    .quick-list li {
+      display: flex;
+      gap: 12px;
+      color: var(--text);
+      line-height: 1.45;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      padding-bottom: 14px;
+    }
+
+    .quick-list li:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .check {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: inline-grid;
+      place-items: center;
+      flex: 0 0 24px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      font-size: 14px;
+    }
+
+    .section {
+      padding: 82px 0;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 36px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(36px, 5vw, 68px);
+      letter-spacing: -.05em;
+      line-height: .95;
+      text-transform: uppercase;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .step-card {
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+      min-height: 265px;
+      position: relative;
+      overflow: hidden;
+      transition: transform .28s ease, border-color .28s ease, background .28s ease;
+    }
+
+    .step-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(199,163,90,.45);
+      background: rgba(255,255,255,.08);
+    }
+
+    .step-number {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      margin-bottom: 38px;
+    }
+
+    .step-card h3 {
+      font-size: 24px;
+      margin-bottom: 14px;
+      letter-spacing: -.02em;
+    }
+
+    .step-card p {
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 24px;
+      background: linear-gradient(90deg, rgba(255,255,255,.07), rgba(255,255,255,.035));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: 0 18px 50px rgba(0,0,0,.2);
+    }
+
+    .timeline-time {
+      color: var(--gold);
+      font-size: 13px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      padding-top: 4px;
+    }
+
+    .timeline-copy h3 {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .timeline-copy p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .panel {
+      background: rgba(255,255,255,.055);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: 0 18px 60px rgba(0,0,0,.22);
+    }
+
+    .panel h2 {
+      font-size: clamp(31px, 4vw, 50px);
+      line-height: 1;
+      letter-spacing: -.04em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .panel ul {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .panel li {
+      display: flex;
+      gap: 12px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .panel li strong {
+      color: var(--text);
+    }
+
+    .warning {
+      border-color: rgba(214,111,86,.32);
+      background:
+        radial-gradient(circle at 20% 0%, rgba(214,111,86,.14), transparent 34%),
+        rgba(255,255,255,.055);
+    }
+
+    .warning .check {
+      color: #ffb29f;
+      background: rgba(214,111,86,.18);
+    }
+
+    .faq {
+      display: grid;
+      gap: 14px;
+    }
+
+    details {
+      background: rgba(255,255,255,.055);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 20px 22px;
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      font-size: 18px;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      color: var(--gold);
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    details[open] summary::after {
+      content: "–";
+    }
+
+    details p {
+      color: var(--muted);
+      line-height: 1.7;
+      margin-top: 16px;
+      max-width: 920px;
+    }
+
+    .cta-section {
+      padding: 86px 0 100px;
+    }
+
+    .cta-box {
+      position: relative;
+      overflow: hidden;
+      border-radius: calc(var(--radius) + 10px);
+      border: 1px solid rgba(199,163,90,.35);
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.82), rgba(0,0,0,.5)),
+        url("../assets/studio-detail.jpg");
+      background-size: cover;
+      background-position: center;
+      padding: clamp(34px, 7vw, 72px);
+      box-shadow: var(--shadow);
+    }
+
+    .cta-box h2 {
+      font-size: clamp(38px, 6vw, 78px);
+      letter-spacing: -.055em;
+      line-height: .95;
+      text-transform: uppercase;
+      max-width: 760px;
+    }
+
+    .cta-box p {
+      color: var(--muted);
+      line-height: 1.7;
+      margin-top: 18px;
+      max-width: 650px;
+      font-size: 18px;
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      padding: 36px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .print-button {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 50;
+      border: 1px solid rgba(199,163,90,.55);
+      background: rgba(10,10,10,.82);
+      backdrop-filter: blur(12px);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 14px 18px;
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 18px 40px rgba(0,0,0,.35);
+    }
+
+    @media (max-width: 920px) {
+      .nav {
+        height: auto;
+        padding: 16px 0;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 76px;
+      }
+
+      .hero-grid,
+      .section-heading,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 26px, var(--max));
+      }
+
+      .brand-mark {
+        width: 46px;
+        height: 46px;
+      }
+
+      .brand-text strong {
+        font-size: 14px;
+      }
+
+      .hero-actions {
+        display: grid;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-card,
+      .step-card,
+      .timeline-item,
+      .panel {
+        padding: 22px;
+      }
+
+      .print-button {
+        left: 14px;
+        right: 14px;
+      }
+    }
+
+    @media print {
+      .site-header,
+      .hero-actions,
+      .cta-section,
+      .footer,
+      .print-button {
+        display: none !important;
+      }
+
+      body {
+        background: #fff;
+        color: #111;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 30px 0;
+      }
+
+      .hero::before,
+      .hero::after,
+      body::before {
+        display: none;
+      }
+
+      .hero-grid,
+      .section-heading,
+      .split,
+      .steps,
+      .timeline-item {
+        display: block;
+      }
+
+      .hero-card,
+      .step-card,
+      .timeline-item,
+      .panel,
+      details {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        background: #fff;
+        color: #111;
+        break-inside: avoid;
+      }
+
+      p,
+      li,
+      .hero p,
+      .section-heading p,
+      .timeline-copy p,
+      .panel li,
+      details p {
+        color: #222;
+      }
+
+      .section {
+        padding: 18px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html" aria-label="Ink Therapy home">
+        <img class="brand-mark" src="../assets/logo-white.png" alt="Ink Therapy logo" />
+        <span class="brand-text">
+          <strong>Ink Therapy</strong>
+          <span>& Associates</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../services/index.html">Services</a>
+        <a class="active" href="./index.html">Aftercare</a>
+        <a href="../about/index.html">About</a>
+        <a class="nav-cta" href="../contact/index.html">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Heal it right</div>
+          <h1>Tattoo Aftercare</h1>
+          <p>
+            Your tattoo is a fresh piece of art and fresh skin. Follow these instructions to keep it clean,
+            calm, protected, and healing beautifully.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#instructions">View Instructions</a>
+            <a class="btn btn-secondary" href="#warning-signs">When to Get Help</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Quick aftercare reminders">
+          <div class="quick-title">Quick Reminders</div>
+          <ul class="quick-list">
+            <li><span class="check">✓</span><span>Wash your hands before touching your tattoo.</span></li>
+            <li><span class="check">✓</span><span>Clean gently with mild, fragrance-free soap.</span></li>
+            <li><span class="check">✓</span><span>Use a very thin layer of aftercare product or moisturizer.</span></li>
+            <li><span class="check">✓</span><span>Do not scratch, pick, peel, soak, swim, or tan while healing.</span></li>
+            <li><span class="check">✓</span><span>When fully healed, protect your tattoo from the sun.</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="instructions" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>The First Steps Matter</h2>
+          <p>
+            Proper aftercare helps protect your tattoo, reduce irritation, and preserve the final result.
+            Healing times vary, but clean skin, light moisture, and patience go a long way.
+          </p>
+        </div>
+
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-number">Step 01</div>
+            <h3>Remove the Bandage</h3>
+            <p>
+              Leave your bandage on for the amount of time your artist recommends. For a standard bandage,
+              this is usually about 1–2 hours. If your artist used a second-skin style bandage, follow the
+              specific instructions given to you.
+            </p>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">Step 02</div>
+            <h3>Wash Gently</h3>
+            <p>
+              Wash your hands first. Then gently wash the tattoo with warm water and a mild, fragrance-free
+              soap. Do not scrub. Pat dry with a clean paper towel and let it air dry for a few minutes.
+            </p>
+          </article>
+
+          <article class="step-card">
+            <div class="step-number">Step 03</div>
+            <h3>Moisturize Lightly</h3>
+            <p>
+              Apply a very thin layer of recommended ointment or tattoo aftercare product. Use only enough
+              to lightly moisturize the tattoo. It should not look greasy or feel sticky.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Healing Timeline</h2>
+          <p>
+            Everyone heals a little differently. These are general guidelines. Always follow any specific
+            instructions your artist gives you.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-time">First 3 Days</div>
+            <div class="timeline-copy">
+              <h3>Clean and protect</h3>
+              <p>
+                Wash the tattoo 2–3 times per day or as directed by your artist. After washing and drying,
+                apply a thin layer of recommended ointment or tattoo aftercare product. Avoid over-moisturizing.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-time">Days 3–14</div>
+            <div class="timeline-copy">
+              <h3>Switch to lotion</h3>
+              <p>
+                After the first few days, switch to a fragrance-free lotion such as Lubriderm, Curel, Eucerin,
+                or another unscented moisturizer. Continue moisturizing lightly until the tattoo is fully healed.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-time">While Healing</div>
+            <div class="timeline-copy">
+              <h3>Let it flake naturally</h3>
+              <p>
+                Tenderness, tightness, itching, flaking, and light scabbing can be normal. Do not pick, scratch,
+                or peel the tattoo. Let flakes and scabs fall off naturally to protect the ink and skin.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <article class="panel">
+          <h2>Do This</h2>
+          <ul>
+            <li><span class="check">✓</span><span><strong>Wash your hands</strong> before touching your tattoo.</span></li>
+            <li><span class="check">✓</span><span><strong>Keep it clean</strong> using warm water and mild, fragrance-free soap.</span></li>
+            <li><span class="check">✓</span><span><strong>Pat dry</strong> with a clean paper towel. Do not rub.</span></li>
+            <li><span class="check">✓</span><span><strong>Moisturize lightly</strong> with a recommended ointment or unscented lotion.</span></li>
+            <li><span class="check">✓</span><span><strong>Wear loose clothing</strong> when possible to avoid friction.</span></li>
+          </ul>
+        </article>
+
+        <article class="panel warning">
+          <h2>Avoid This</h2>
+          <ul>
+            <li><span class="check">!</span><span><strong>No swimming</strong> in pools, lakes, rivers, oceans, or hot tubs while healing.</span></li>
+            <li><span class="check">!</span><span><strong>No soaking</strong> in baths or long showers.</span></li>
+            <li><span class="check">!</span><span><strong>No direct sun</strong> or tanning beds while the tattoo is healing.</span></li>
+            <li><span class="check">!</span><span><strong>No scratching, picking, or peeling</strong> the tattoo.</span></li>
+            <li><span class="check">!</span><span><strong>No scented lotions</strong>, perfumes, or harsh products on the tattoo.</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="warning-signs" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>When to Contact a Professional</h2>
+          <p>
+            Some redness, swelling, tenderness, itching, and flaking can be normal. However, certain symptoms
+            can be signs that your tattoo needs medical attention.
+          </p>
+        </div>
+
+        <div class="panel warning">
+          <ul>
+            <li><span class="check">!</span><span>Worsening pain instead of gradual improvement</span></li>
+            <li><span class="check">!</span><span>Spreading redness, unusual heat, or severe swelling</span></li>
+            <li><span class="check">!</span><span>Foul odor or pus-like drainage</span></li>
+            <li><span class="check">!</span><span>Fever, chills, red streaking, or feeling seriously unwell</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Aftercare FAQ</h2>
+          <p>
+            These are the questions clients usually ask after leaving the studio.
+          </p>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Can I shower with a new tattoo?</summary>
+            <p>
+              Yes. Short showers are fine. Avoid soaking the tattoo and avoid long, hot showers. Gently wash,
+              rinse, pat dry, and moisturize lightly after it dries.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I swim after getting tattooed?</summary>
+            <p>
+              Do not swim while your tattoo is healing. Avoid pools, lakes, rivers, oceans, hot tubs, baths,
+              and saunas for at least two weeks or until fully healed.
+            </p>
+          </details>
+
+          <details>
+            <summary>Is itching normal?</summary>
+            <p>
+              Yes. Itching is common during healing. Do not scratch or pick. Lightly moisturize if the tattoo
+              feels dry or tight.
+            </p>
+          </details>
+
+          <details>
+            <summary>What should I use on my tattoo?</summary>
+            <p>
+              Use the product recommended by your artist. In general, use a mild fragrance-free soap and a
+              fragrance-free moisturizer. Avoid scented products until the tattoo is fully healed.
+            </p>
+          </details>
+
+          <details>
+            <summary>When can I put sunscreen on it?</summary>
+            <p>
+              Do not put sunscreen on a tattoo that is still healing. Once fully healed, use sunscreen when
+              your tattoo will be exposed to the sun to help protect it from fading.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <div class="eyebrow">Need help?</div>
+          <h2>Questions about your healing tattoo?</h2>
+          <p>
+            If something feels off or you are unsure about your healing process, reach out to the studio.
+            For signs of infection or serious symptoms, contact a medical professional.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="../contact/index.html">Contact the Studio</a>
+            <a class="btn btn-secondary" href="../services/index.html">View Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button class="print-button" onclick="window.print()">Print Aftercare</button>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Ink Therapy & Associates. All rights reserved.</p>
+      <p>Keep it clean. Keep it light. Let it heal.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const cards = document.querySelectorAll(".step-card, .timeline-item, .panel, details");
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.animate(
+              [
+                { opacity: 0, transform: "translateY(22px)" },
+                { opacity: 1, transform: "translateY(0)" }
+              ],
+              {
+                duration: 650,
+                easing: "cubic-bezier(.2,.8,.2,1)",
+                fill: "forwards"
+              }
+            );
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    cards.forEach(card => {
+      card.style.opacity = "0";
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>
