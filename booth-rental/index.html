@@ -1,1 +1,711 @@
+# PAGE: booth-rental/index.html
+
+DELETE EXISTING FILE: No
+PASTE ORDER:
+Part 1 of 1
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Booth Rental | Ink Therapy</title>
+<meta name="description" content="Booth rental opportunities for tattoo artists at Ink Therapy, a calm, inclusive tattoo studio in Fayetteville, Arkansas." />
+<link rel="stylesheet" href="../css/nav.css" />
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,Arial,sans-serif;
+  background:#07100b;
+  color:#fff8ed;
+  overflow-x:hidden;
+}
+
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+
+:root{
+  --cream:#fff8ed;
+  --gold:#c9a15f;
+  --muted:rgba(255,248,237,.72);
+  --line:rgba(255,248,237,.14);
+}
+
+.noise{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  pointer-events:none;
+  opacity:.07;
+  background-image:url("https://grainy-gradients.vercel.app/noise.svg");
+}
+
+.eyebrow{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.25em;
+  font-size:11px;
+  font-weight:900;
+}
+
+h1,h2,h3{
+  font-family:Georgia,serif;
+  font-weight:500;
+  line-height:.9;
+}
+
+p{
+  color:var(--muted);
+  line-height:1.75;
+  font-size:17px;
+}
+
+.btn-row{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:15px 22px;
+  border-radius:999px;
+  border:1px solid rgba(255,248,237,.22);
+  background:rgba(7,16,11,.56);
+  backdrop-filter:blur(18px);
+  color:var(--cream);
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  font-size:12px;
+  font-weight:900;
+  transition:.35s;
+}
+
+.btn.gold{
+  background:linear-gradient(135deg,#d7b675,#9f7b3c);
+  color:#140f08;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  border-color:rgba(201,161,95,.7);
+}
+
+.hero{
+  min-height:88vh;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:end;
+  padding:150px 5vw 70px;
+  background:#07100b;
+}
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+}
+
+.hero-bg img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  filter:saturate(1.02) contrast(1.08) brightness(.82);
+  transform:scale(1.04);
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(7,16,11,.96),rgba(7,16,11,.66),rgba(7,16,11,.34)),
+    linear-gradient(to top,#07100b,rgba(7,16,11,.42),rgba(7,16,11,.08));
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:1120px;
+}
+
+.hero h1{
+  font-size:clamp(62px,10vw,150px);
+  letter-spacing:-.075em;
+  text-shadow:0 32px 90px rgba(0,0,0,.85);
+}
+
+.hero h1 em{
+  display:block;
+  color:var(--gold);
+  font-style:italic;
+}
+
+.hero p{
+  max-width:760px;
+  margin-top:24px;
+  font-size:21px;
+  color:rgba(255,248,237,.82);
+}
+
+.facts{
+  margin-top:42px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  max-width:980px;
+  border:1px solid var(--line);
+  border-radius:28px;
+  overflow:hidden;
+  background:rgba(255,255,255,.1);
+  backdrop-filter:blur(20px);
+}
+
+.facts div{
+  padding:24px;
+  background:rgba(255,255,255,.045);
+}
+
+.facts strong{
+  display:block;
+  font-family:Georgia,serif;
+  font-size:34px;
+  margin-bottom:8px;
+}
+
+.facts span{
+  color:rgba(255,248,237,.66);
+  font-size:14px;
+  line-height:1.55;
+}
+
+.intro{
+  padding:100px 5vw;
+  background:
+    radial-gradient(circle at 80% 12%,rgba(201,161,95,.1),transparent 30%),
+    #07100b;
+}
+
+.intro-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:60px;
+  align-items:end;
+}
+
+.intro h2{
+  font-size:clamp(44px,7vw,104px);
+  letter-spacing:-.06em;
+}
+
+.intro h2 em{
+  color:var(--gold);
+  font-style:italic;
+}
+
+.intro p{
+  font-size:20px;
+  max-width:720px;
+}
+
+.benefits{
+  padding:0 5vw 110px;
+  background:#07100b;
+}
+
+.benefit-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.benefit-card{
+  min-height:390px;
+  border-radius:38px;
+  padding:30px;
+  border:1px solid var(--line);
+  background:
+    radial-gradient(circle at top right,rgba(201,161,95,.13),transparent 40%),
+    rgba(255,255,255,.045);
+  box-shadow:0 35px 110px rgba(0,0,0,.42);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.number{
+  color:var(--gold);
+  letter-spacing:.18em;
+  font-size:11px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.benefit-card h3{
+  font-size:clamp(32px,4vw,54px);
+  margin-top:22px;
+}
+
+.benefit-card p{
+  margin-top:18px;
+}
+
+.pill{
+  margin-top:24px;
+  display:inline-flex;
+  width:max-content;
+  padding:11px 15px;
+  border-radius:999px;
+  border:1px solid rgba(201,161,95,.35);
+  background:rgba(201,161,95,.1);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.photo-section{
+  padding:110px 5vw;
+  background:linear-gradient(to bottom,#07100b,#10190f,#07100b);
+}
+
+.photo-wrap{
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:56px;
+  align-items:center;
+}
+
+.photo{
+  border-radius:44px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  box-shadow:0 40px 120px rgba(0,0,0,.55);
+}
+
+.photo img{
+  width:100%;
+  height:640px;
+  object-fit:cover;
+}
+
+.photo-copy h2{
+  font-size:clamp(44px,7vw,100px);
+  letter-spacing:-.06em;
+}
+
+.photo-copy p{
+  font-size:20px;
+  margin-top:24px;
+  max-width:720px;
+}
+
+.list{
+  margin-top:28px;
+  display:grid;
+  gap:0;
+}
+
+.list div{
+  padding:15px 0;
+  border-top:1px solid rgba(255,248,237,.1);
+  color:rgba(255,248,237,.76);
+  line-height:1.55;
+}
+
+.apply{
+  padding:110px 5vw;
+  background:#07100b;
+}
+
+.apply-wrap{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:60px;
+  align-items:start;
+}
+
+.apply h2{
+  font-size:clamp(44px,7vw,100px);
+  letter-spacing:-.06em;
+}
+
+.steps{
+  display:grid;
+  gap:16px;
+}
+
+.step{
+  padding:28px;
+  border-radius:30px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.045);
+}
+
+.step strong{
+  display:block;
+  font-family:Georgia,serif;
+  font-size:30px;
+  margin-bottom:10px;
+  color:#fff8ed;
+}
+
+.cta{
+  padding:120px 5vw;
+  background:
+    linear-gradient(90deg,rgba(7,16,11,.95),rgba(7,16,11,.68),rgba(7,16,11,.3)),
+    url("../assets/hero-new.png") center/cover;
+}
+
+.cta-box{
+  max-width:1050px;
+  padding:54px;
+  border-radius:42px;
+  border:1px solid var(--line);
+  background:rgba(7,16,11,.62);
+  backdrop-filter:blur(24px);
+  box-shadow:0 40px 120px rgba(0,0,0,.55);
+}
+
+.cta h2{
+  font-size:clamp(44px,7vw,100px);
+  letter-spacing:-.06em;
+}
+
+.cta p{
+  max-width:700px;
+  margin-top:22px;
+  font-size:20px;
+}
+
+@media(max-width:950px){
+  .hero{
+    min-height:84vh;
+    padding:130px 22px 56px;
+  }
+
+  .hero h1{
+    font-size:clamp(54px,16vw,86px);
+  }
+
+  .hero p{
+    font-size:18px;
+  }
+
+  .facts,
+  .benefit-grid,
+  .intro-grid,
+  .photo-wrap,
+  .apply-wrap{
+    grid-template-columns:1fr;
+  }
+
+  .intro,
+  .photo-section,
+  .apply,
+  .cta{
+    padding:80px 22px;
+  }
+
+  .benefits{
+    padding:0 22px 80px;
+  }
+
+  .benefit-card{
+    min-height:auto;
+  }
+
+  .photo img{
+    height:520px;
+  }
+
+  .cta-box{
+    padding:32px;
+    border-radius:32px;
+  }
+
+  .btn{
+    width:100%;
+  }
+}
+</style>
+</head>
+<body>
+<div class="noise"></div>
+
+<header class="site-header">
+  <a href="../" class="brand brand-text">INK <span>THERAPY</span></a>
+
+  <nav class="desktop-nav">
+    <a href="../owner/">Owner</a>
+    <a href="../team/">Artists</a>
+    <a href="../services/">Services</a>
+    <a href="../gallery/">Gallery</a>
+    <a href="../booth-rental/">Booth Rental</a>
+    <a href="../contact/" class="nav-cta">Book</a>
+  </nav>
+
+  <button class="menu-btn" id="menuBtn">☰</button>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <a href="../owner/">Owner</a>
+  <a href="../team/">Artists</a>
+  <a href="../services/">Services</a>
+  <a href="../gallery/">Gallery</a>
+  <a href="../booth-rental/">Booth Rental</a>
+  <a href="../contact/">Book</a>
+</div>
+
+<main>
+
+<section class="hero">
+  <div class="hero-bg">
+    <img src="../assets/hero-new.png" alt="Ink Therapy studio atmosphere">
+  </div>
+
+  <div class="hero-content">
+    <div class="eyebrow">Booth rental</div>
+
+    <h1>
+      A studio home
+      <em>for artists.</em>
+    </h1>
+
+    <p>
+      Ink Therapy is built for artists who want independence, beauty, safety,
+      and a calmer tattoo environment without losing the feeling of community.
+    </p>
+
+    <div class="btn-row">
+      <a href="../contact/" class="btn gold">Ask About Availability</a>
+      <a href="#fit" class="btn">See if it Fits</a>
+    </div>
+
+    <div class="facts">
+      <div>
+        <strong>Artist-led</strong>
+        <span>A studio culture shaped by tattooers, not corporate energy.</span>
+      </div>
+
+      <div>
+        <strong>Inclusive</strong>
+        <span>LGBTQIA+ friendly, client-centered, and respectful.</span>
+      </div>
+
+      <div>
+        <strong>Premium</strong>
+        <span>A polished space that feels more like a sanctuary than a shop.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="intro" id="fit">
+  <div class="intro-grid">
+    <div>
+      <div class="eyebrow">The right fit</div>
+
+      <h2>
+        For artists who care
+        <em>about more than the chair.</em>
+      </h2>
+    </div>
+
+    <p>
+      Ink Therapy is for artists who want a better daily environment:
+      calm, intentional, clean, stylish, and welcoming.
+      The space is meant to support artists and clients at the same time.
+    </p>
+  </div>
+</section>
+
+<section class="benefits">
+  <div class="benefit-grid">
+
+    <article class="benefit-card">
+      <div>
+        <div class="number">01 / Atmosphere</div>
+
+        <h3>Work somewhere that feels good.</h3>
+
+        <p>
+          A softer, more elevated tattoo environment helps clients relax
+          and gives artists a space they can feel proud to bring people into.
+        </p>
+      </div>
+
+      <div class="pill">Calm studio energy</div>
+    </article>
+
+    <article class="benefit-card">
+      <div>
+        <div class="number">02 / Independence</div>
+
+        <h3>Keep your own rhythm.</h3>
+
+        <p>
+          Booth rental is ideal for artists who already have momentum
+          and want space to serve their clients with freedom and professionalism.
+        </p>
+      </div>
+
+      <div class="pill">Artist independence</div>
+    </article>
+
+    <article class="benefit-card">
+      <div>
+        <div class="number">03 / Community</div>
+
+        <h3>Be around people who care.</h3>
+
+        <p>
+          The goal is a studio culture where artists respect each other,
+          clients feel safe, and the environment stays welcoming.
+        </p>
+      </div>
+
+      <div class="pill">Shared standards</div>
+    </article>
+
+  </div>
+</section>
+
+<section class="photo-section">
+  <div class="photo-wrap">
+
+    <div class="photo">
+      <img src="../assets/team-lex.png" alt="Artist tattooing inside Ink Therapy">
+    </div>
+
+    <div class="photo-copy">
+      <div class="eyebrow">What matters here</div>
+
+      <h2>
+        Beautiful space.
+        Strong standards.
+        Real respect.
+      </h2>
+
+      <p>
+        Ink Therapy is best for artists who value cleanliness,
+        communication, kindness, client trust, and a professional environment
+        that still feels deeply personal.
+      </p>
+
+      <div class="list">
+        <div>Artists should be respectful, reliable, and client-centered.</div>
+        <div>The space is LGBTQIA+ friendly and built around safety.</div>
+        <div>The right artist should add to the energy of the studio.</div>
+        <div>Availability and details should be discussed directly with the studio.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="apply">
+  <div class="apply-wrap">
+
+    <div>
+      <div class="eyebrow">How to start</div>
+
+      <h2>Interested in renting a booth?</h2>
+
+      <p style="margin-top:24px;font-size:20px">
+        Send a simple message with your name, experience,
+        portfolio/social link, current client base,
+        and what kind of studio environment you are looking for.
+      </p>
+
+      <div class="btn-row">
+        <a class="btn gold"
+           href="mailto:inktherapy777@gmail.com?subject=Booth%20Rental%20Inquiry">
+          Email Inquiry
+        </a>
+
+        <a class="btn"
+           href="https://www.instagram.com/ink_therapy777/">
+          Message Instagram
+        </a>
+      </div>
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+        <strong>1. Send your portfolio</strong>
+        <p>Share your work, experience, social link, and current booking situation.</p>
+      </div>
+
+      <div class="step">
+        <strong>2. Talk through fit</strong>
+        <p>The studio can discuss availability, expectations, schedule needs, and culture fit.</p>
+      </div>
+
+      <div class="step">
+        <strong>3. Visit the space</strong>
+        <p>If it feels aligned, come see the studio and talk through details directly.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="cta-box">
+
+    <div class="eyebrow">A different kind of shop</div>
+
+    <h2>
+      Bring your work into a space that feels intentional.
+    </h2>
+
+    <p>
+      For the right artist, Ink Therapy is more than a booth.
+      It is a calmer studio home with a brand, atmosphere,
+      and client experience worth being part of.
+    </p>
+
+    <div class="btn-row">
+      <a class="btn gold" href="../contact/">Contact the Studio</a>
+      <a class="btn" href="../team/">Meet the Artists</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+<script src="../components/footer.js"></script>
+
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const mobilePanel=document.getElementById('mobilePanel');
+
+menuBtn.addEventListener('click',()=>{
+  mobilePanel.classList.toggle('active');
+  menuBtn.textContent=mobilePanel.classList.contains('active')?'×':'☰';
+});
+
+mobilePanel.querySelectorAll('a').forEach(link=>{
+  link.addEventListener('click',()=>{
+    mobilePanel.classList.remove('active');
+    menuBtn.textContent='☰';
+  });
+});
+</script>
+
+</body>
+</html>
+```
+
+Commit message:
+`Create premium cinematic booth rental page`
 
